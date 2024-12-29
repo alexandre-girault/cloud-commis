@@ -1,0 +1,24 @@
+# cloud-commis configuration example with default values
+#
+# 
+# configPath:       "/etc/cloud-commis/config.yaml",
+#
+# debug info warn error
+# loglevel:         "info",
+#
+# scanIntervalMin:  60,
+#
+# if true, start without web UI
+# disable_ui:       false,
+#
+# local s3
+# storage:          "local",
+#
+# localStoragePath: "/data/cloud-commis/",
+#
+# required if storage is set to s3
+# s3BucketName:     "",
+# s3BucketPath:     "",
+#
+# listening port of the web UI
+# httpPort:         8080,
