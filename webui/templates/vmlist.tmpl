@@ -1,0 +1,32 @@
+<table class="table table-striped" id="vmlist-table">
+<thead>
+  <tr>
+    <th>Region</th>
+    <th>InstanceId</th>
+	<th>Name</th>
+	<th>Architecture</th>
+	<th>PlatformDetails</th> 
+	<th>InstanceType</th>
+	<th>State</th>       
+  </tr>
+</thead>
+<tbody>
+  {{ range . }}
+    {{$region := .RegionName}}
+    {{range .VirtualMachines}}
+    <tr>
+      <td>{{$region}}</td>
+      <td>{{ .InstanceId }}</td>
+	    <td>{{.Name}}</td>
+	    <td>{{.Architecture}}</td>
+	    <td>{{.PlatformDetails}}</td>  
+	    <td>{{.InstanceType}}</td>
+	    <td>{{.State}}</td>
+    </tr>
+  {{end}}
+  {{end}}
+</tbody>
+</table>
+<script>
+$('#vmlist-table').DataTable();
+</script>
