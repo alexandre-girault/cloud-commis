@@ -1,9 +1,11 @@
-# Test binary
 bin/*
+tmp/*
+
 *.test
-
-# Output of the go coverage tool
 *.out
-
-# env file
 .env
+
+# frontend libs
+webui/statics/css/bootstrap.min.css
+webui/statics/js/bootstrap.bundle.min.js
+webui/statics/js/htmx.min.js
