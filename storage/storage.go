@@ -6,15 +6,18 @@ import (
 )
 
 type Storage interface {
-	Read() (Aws_scans, bool)
-	Write(Aws_scans) bool
+	Read() (Aws_scans, error)
+	Write(Aws_scans) error
 	Delete() bool
 }
 
 var Data Storage
 
-func init() {
+func Configure() {
+	dataDir := config.ParsedData.String("localStoragePath")
+
 	switch config.ParsedData.String("storage") {
+
 	case "local":
 		logger.Log.Info("Using local filesystem as storage")
 		logger.Log.Info("Local file is " + dataDir + localFileName)

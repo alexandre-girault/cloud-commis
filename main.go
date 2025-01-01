@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-	config.Read()
+	config.Read(config.ParsedData)
 	// Start
 	logger.Log.Info("loglevel = " + config.ParsedData.String("loglevel"))
 	logger.SetLogLevel(config.ParsedData.String("loglevel"))
