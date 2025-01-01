@@ -4,12 +4,9 @@ import (
 	"cloud-commis/config"
 	"cloud-commis/logger"
 	"encoding/json"
-	"fmt"
 	"os"
 	"strings"
 )
-
-var dataDir = config.ParsedData.String("localStoragePath")
 
 const (
 	localFileName = "ccdata.json"
@@ -18,20 +15,22 @@ const (
 type localStorage struct {
 }
 
-func createDir() bool {
+func createDir() error {
+	dataDir := config.ParsedData.String("localStoragePath")
 
-	logger.Log.Debug("data directory is " + dataDir)
+	logger.Log.Error("data directory is " + dataDir)
 
 	mkerr := os.MkdirAll(dataDir, 0750)
 	if mkerr != nil {
-		logger.Log.Error(mkerr.Error())
+		logger.Log.Error(dataDir + mkerr.Error())
 	}
 
-	return true
+	return mkerr
 }
 
-func (localS localStorage) Read() (Aws_scans, bool) {
+func (localS localStorage) Read() (Aws_scans, error) {
 	var jsonData Aws_scans
+	dataDir := config.ParsedData.String("localStoragePath")
 
 	readFile, err := os.ReadFile(dataDir + localFileName)
 	if err != nil {
@@ -39,18 +38,20 @@ func (localS localStorage) Read() (Aws_scans, bool) {
 	}
 
 	logger.Log.Debug("reading file " + dataDir + localFileName)
-	err = json.Unmarshal(readFile, &jsonData.Data)
+	err = json.Unmarshal(readFile, &jsonData)
 	if err != nil {
 		logger.Log.Error("Can't read json file : " + err.Error())
 	}
-	fmt.Println(jsonData)
 
-	return jsonData, true
+	return jsonData, err
 }
 
-func (localS localStorage) Write(data Aws_scans) bool {
+func (localS localStorage) Write(data Aws_scans) error {
 
-	if !createDir() {
+	dataDir := config.ParsedData.String("localStoragePath")
+
+	err := createDir()
+	if err != nil {
 		logger.Log.Error("Can't write in directory " + dataDir)
 	}
 
@@ -64,10 +65,12 @@ func (localS localStorage) Write(data Aws_scans) bool {
 		logger.Log.Error(writeErr.Error())
 	}
 
-	return true
+	return writeErr
 }
 
 func (localS localStorage) Delete() bool {
+
+	dataDir := config.ParsedData.String("localStoragePath")
 
 	files, err := os.ReadDir(dataDir)
 	if err != nil {

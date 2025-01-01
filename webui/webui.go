@@ -25,8 +25,10 @@ func getVM(writer http.ResponseWriter, request *http.Request) {
 
 	writer.WriteHeader(http.StatusOK)
 
+	storage.Configure()
+
 	jsonData, err := storage.Data.Read()
-	if !err {
+	if err != nil {
 		logger.Log.Error("Read storage failure")
 	}
 

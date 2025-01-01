@@ -29,7 +29,7 @@ webui/statics/js/htmx.min.js:
 	cp ./tmp/htmx.min.js webui/statics/js/htmx.min.js
 
 test:
-	go test ./... -cover
+	CC_loglevel="error" go test -v ./... -cover
 
 lint:
 	docker run --rm -v $$(pwd):/app -w /app golangci/golangci-lint:v1.62.2 golangci-lint run -v

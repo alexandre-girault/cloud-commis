@@ -27,7 +27,7 @@ func TestEc2ScanParse(t *testing.T) {
 		State:                    "stopped",
 	}
 
-	testFile, err := os.ReadFile("../testdata/awsDescribeInstanceOutput-01.json")
+	testFile, err := os.ReadFile("../testData/awsDescribeInstanceOutput-01.json")
 	if err != nil {
 		t.Error(err.Error())
 	}
