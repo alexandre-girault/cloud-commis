@@ -25,8 +25,6 @@ func getVM(writer http.ResponseWriter, request *http.Request) {
 
 	writer.WriteHeader(http.StatusOK)
 
-	storage.Configure()
-
 	jsonData, err := storage.Data.Read()
 	if err != nil {
 		logger.Log.Error("Read storage failure")
@@ -35,7 +33,7 @@ func getVM(writer http.ResponseWriter, request *http.Request) {
 	var templatesFS = fs.FS(templateFiles)
 
 	tmpl := template.Must(template.ParseFS(templatesFS, "templates/vmlist.tmpl"))
-	tmplErr := tmpl.Execute(writer, jsonData.Data)
+	tmplErr := tmpl.Execute(writer, jsonData.AwsAccounts)
 	if tmplErr != nil {
 		logger.Log.Error("Cannot render template vmlist.tmpl" + tmplErr.Error())
 	}

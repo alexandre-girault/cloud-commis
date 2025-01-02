@@ -1,24 +1,41 @@
 # cloud-commis configuration example with default values
 #
 # 
-# configPath:       "/etc/cloud-commis/config.yaml",
+# configPath:       "/etc/cloud-commis/config.yaml"
 #
 # debug info warn error
-# loglevel:         "info",
+loglevel:         "debug"
 #
-# scanIntervalMin:  60,
+scanIntervalMin: 1
 #
 # if true, start without web UI
-# disable_ui:       false,
+# disable_ui:       false
 #
 # local s3
-# storage:          "local",
+# storage:          "local"
 #
-# localStoragePath: "/data/cloud-commis/",
+localStoragePath: "./testData/"
 #
 # required if storage is set to s3
-# s3BucketName:     "",
-# s3BucketPath:     "",
+# s3BucketName:     ""
+# s3BucketPath:     ""
 #
 # listening port of the web UI
-# httpPort:         8080,
+# httpPort:         8080
+#
+# Example to scan 3 cloud accounts
+awsProfiles:
+#  account: 
+#    name: "aws01"
+  - name: testAccount1
+    roleArn: "arn:aws:iam::767410294669:role/cloud-commis-assume-role"
+#  - name: testAccount2
+#    roleArn: "arn:aws:iam::767410294669:role/cloud-commis-assume-role2"
+#       id:     "012345678910"
+#       accessKey: "AKIAI4J4J4J4J4J4J4
+#       secretKey: "J4J4J"
+#   - aws02:
+#       type:   "aws"
+#       id:     "012345678910"
+#       accessKey: "AKIAI4J4J4J4J4J4J4
+#       secretKey: "J4J4J"

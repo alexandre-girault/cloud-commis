@@ -1,4 +1,6 @@
 BOOTSTRAP_VERSION=5.3.3
+-include .env
+export
 
 all: build
 
@@ -33,6 +35,10 @@ test:
 
 lint:
 	docker run --rm -v $$(pwd):/app -w /app golangci/golangci-lint:v1.62.2 golangci-lint run -v
+
+.PHONY: run
+run:
+	go run main.go --config=config.yaml
 
 .PHONY: clean
 clean:

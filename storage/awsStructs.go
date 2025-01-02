@@ -3,7 +3,13 @@ package storage
 import "time"
 
 type Aws_scans struct {
-	Data []Aws_region_scan
+	AwsScanDate time.Time
+	AwsAccounts []Aws_account_scan
+}
+
+type Aws_account_scan struct {
+	AwsAccountID int
+	AwsRegions   []Aws_region_scan
 }
 
 type Aws_region_scan struct {

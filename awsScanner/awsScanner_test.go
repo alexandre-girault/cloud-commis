@@ -37,7 +37,7 @@ func TestEc2ScanParse(t *testing.T) {
 		t.Error(err.Error())
 	}
 
-	result := ec2ScanParse(testData)
+	result := ec2ScanParse(testData, "eu-west-1")
 
 	if !reflect.DeepEqual(want, result.VirtualMachines[0]) {
 		t.Error("Parsing fail to found the correct ec2 attributes, \nwant : \n" + fmt.Sprintf("%+v", want) + "\nget : \n" + fmt.Sprintf("%+v", result.VirtualMachines[0]))

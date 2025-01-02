@@ -3,8 +3,12 @@ package config
 import (
 	"cloud-commis/logger"
 	"os"
+	"strconv"
 	"strings"
 
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/aws/aws-sdk-go/service/sts"
 	"github.com/knadh/koanf/parsers/yaml"
 	"github.com/knadh/koanf/providers/confmap"
 	"github.com/knadh/koanf/providers/env"
@@ -12,11 +16,18 @@ import (
 	"github.com/knadh/koanf/v2"
 )
 
-var ParsedData = koanf.New(".")
-
 const (
 	defaultConfigPath = "/etc/cloud-commis/config.yaml"
 )
+
+var ParsedData = koanf.New(".")
+var AwsProfiles []awsProfile
+
+type awsProfile struct {
+	Name         string
+	AwsAccountID int
+	RoleArn      string
+}
 
 func Read(config *koanf.Koanf) {
 
@@ -52,6 +63,25 @@ func Read(config *koanf.Koanf) {
 		logger.Log.Info("No config file found")
 	}
 
+	// aws profiles from yaml config
+	for i := 0; i < len(config.Slices("awsProfiles")); i++ {
+
+		p := config.Slices("awsProfiles")[i]
+
+		profile := awsProfile{
+			Name:    p.String("name"),
+			RoleArn: p.String("roleArn")}
+		AwsProfiles = append(AwsProfiles, profile)
+
+	}
+
+	_, profileInfo, err := AwsGetIdentity()
+	if err != nil {
+		logger.Log.Error(err.Error())
+	} else {
+		logger.Log.Info("AWS profile is " + profileInfo)
+	}
+
 	// yaml config is overwrittent by env
 	err = config.Load(env.Provider("CC_", ".", func(s string) string {
 		return strings.Replace(strings.ToLower(
@@ -59,6 +89,28 @@ func Read(config *koanf.Koanf) {
 	}), nil)
 	if err != nil {
 		logger.Log.Error(err.Error())
+	}
+
+}
+
+func AwsGetIdentity() (int, string, error) {
+	aws_session := session.Must(session.NewSessionWithOptions(session.Options{
+		SharedConfigState: session.SharedConfigEnable,
+		Config:            aws.Config{Region: aws.String("eu-west-3")},
+	}))
+	svc := sts.New(aws_session)
+
+	input := &sts.GetCallerIdentityInput{}
+
+	result, err := svc.GetCallerIdentity(input)
+	if err != nil {
+		logger.Log.Error(err.Error())
+		return 0, "", err
+
+	} else {
+		accountId, _ := strconv.Atoi(*result.Account)
+		return accountId, *result.Arn, nil
+
 	}
 
 }
