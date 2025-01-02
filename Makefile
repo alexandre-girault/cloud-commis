@@ -1,5 +1,5 @@
 BOOTSTRAP_VERSION=5.3.3
-include .env
+-include .env
 export
 
 all: build
