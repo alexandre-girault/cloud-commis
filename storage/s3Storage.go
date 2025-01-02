@@ -19,7 +19,7 @@ type CachedData struct {
 
 var Cache = make(map[string]CachedData)
 
-func clearCache() {
+func ClearCache() {
 	for {
 		logger.Log.Debug("Checking cache")
 		for cacheKey, cacheValue := range Cache {
@@ -37,9 +37,9 @@ func timeTrack(start time.Time) {
 	logger.Log.Info(strconv.Itoa(int(elapsed.Milliseconds())) + "ms")
 }
 
-func init() {
-	go clearCache()
-}
+//func init() {
+//	go clearCache()
+//}
 
 func GetS3File(bucketName string, filePath string) Aws_scans {
 
@@ -82,7 +82,7 @@ func GetS3File(bucketName string, filePath string) Aws_scans {
 	}
 
 	var jsonData Aws_scans
-	merr := json.Unmarshal(body, &jsonData.Data)
+	merr := json.Unmarshal(body, &jsonData.AwsAccounts)
 	if merr != nil {
 		logger.Log.Error(merr.Error())
 	}
