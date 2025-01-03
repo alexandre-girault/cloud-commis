@@ -36,14 +36,15 @@ func Read(config *koanf.Koanf) {
 	// default config
 	err := config.Load(confmap.Provider(map[string]interface{}{
 		"configPath":       defaultConfigPath,
-		"loglevel":         "info",
-		"scanIntervalMin":  60,
 		"disable_ui":       false,
-		"storage":          "local",
+		"httpPort":         8080,
 		"localStoragePath": "/data/cloud-commis",
+		"loglevel":         "info",
 		"s3BucketName":     "",
 		"s3BucketPath":     "",
-		"httpPort":         8080,
+		"scanAws":          true,
+		"scanIntervalMin":  60,
+		"storage":          "local",
 	}, "."), nil)
 	if err != nil {
 		logger.Log.Error(err.Error())
@@ -63,10 +64,10 @@ func Read(config *koanf.Koanf) {
 		logger.Log.Info("No config file found")
 	}
 
-	// aws profiles from yaml config
-	for i := 0; i < len(config.Slices("awsProfiles")); i++ {
+	// aws roles to assume, from yaml config
+	for i := 0; i < len(config.Slices("awsAssumedRoles")); i++ {
 
-		p := config.Slices("awsProfiles")[i]
+		p := config.Slices("awsAssumedRoles")[i]
 
 		profile := awsProfile{
 			Name:    p.String("name"),
@@ -79,7 +80,7 @@ func Read(config *koanf.Koanf) {
 	if err != nil {
 		logger.Log.Error(err.Error())
 	} else {
-		logger.Log.Info("AWS profile is " + profileInfo)
+		logger.Log.Info("AWS identity is " + profileInfo)
 	}
 
 	// yaml config is overwrittent by env

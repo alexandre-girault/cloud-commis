@@ -24,11 +24,9 @@ localStoragePath: "./testData/"
 # httpPort:         8080
 #
 # Example to scan 3 cloud accounts
-awsProfiles:
-#  account: 
-#    name: "aws01"
-  - name: testAccount1
-    roleArn: "arn:aws:iam::767410294669:role/cloud-commis-assume-role"
+#awsAssumedRoles:
+#  - name: testAccount1
+#    roleArn: "arn:aws:iam::767410294669:role/cloud-commis-assume-role"
 #  - name: testAccount2
 #    roleArn: "arn:aws:iam::767410294669:role/cloud-commis-assume-role2"
 #       id:     "012345678910"

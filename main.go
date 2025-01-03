@@ -16,7 +16,7 @@ func main() {
 	// Start
 	logger.Log.Info("loglevel = " + config.ParsedData.String("loglevel"))
 	logger.SetLogLevel(config.ParsedData.String("loglevel"))
-	logger.Log.Info("test : " + config.ParsedData.String("scan_interval_min"))
+	logger.Log.Info("scan_interval_min : " + config.ParsedData.String("scan_interval_min"))
 	storage.Configure()
 
 	go awsScanner.ScheduledScan()

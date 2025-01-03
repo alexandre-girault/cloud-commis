@@ -18,7 +18,7 @@ type localStorage struct {
 func createDir() error {
 	dataDir := config.ParsedData.String("localStoragePath")
 
-	logger.Log.Error("data directory is " + dataDir)
+	logger.Log.Info("data directory is " + dataDir)
 
 	mkerr := os.MkdirAll(dataDir, 0750)
 	if mkerr != nil {
