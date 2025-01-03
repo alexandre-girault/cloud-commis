@@ -5,6 +5,7 @@ import (
 	"cloud-commis/logger"
 	"cloud-commis/storage"
 	"fmt"
+	"strconv"
 	"sync"
 	"time"
 
@@ -33,22 +34,45 @@ func ScheduledScan() {
 func Aws_instances_inventory() {
 
 	var scans storage.Aws_scans
+	scans.AwsScanDate = time.Now()
 
-	for _, profile := range config.AwsProfiles {
+	//scan accounts with environment credentials
 
-		logger.Log.Info("scanning AWS account " + profile.Name + " with role " + profile.RoleArn)
+	accountId, identity, err := config.AwsGetIdentity()
+	if err != nil {
+		logger.Log.Error("no valid aws credentials found")
+	} else {
+		logger.Log.Info("scanning AWS account " + strconv.Itoa(accountId) + "with identity : " + identity)
 
-		aws_profile_session := session.Must(session.NewSessionWithOptions(session.Options{
+		aws_session := session.Must(session.NewSessionWithOptions(session.Options{
 			SharedConfigState: session.SharedConfigEnable,
 			Config:            aws.Config{Region: aws.String("eu-west-3")},
 		}))
 
-		assumedRole := stscreds.NewCredentials(aws_profile_session, profile.RoleArn)
+		awsClient := ec2.New(aws_session)
 
-		awsClient := ec2.New(aws_profile_session, &aws.Config{Credentials: assumedRole})
+		scans.AwsAccounts = append(scans.AwsAccounts, aws_account_scan(awsClient, nil))
+	}
 
-		scans.AwsAccounts = append(scans.AwsAccounts, aws_account_scan(awsClient, assumedRole))
-		scans.AwsScanDate = time.Now()
+	//scan accounts with assumed roles from config
+	if len(config.AwsProfiles) != 0 {
+		for _, profile := range config.AwsProfiles {
+
+			logger.Log.Info("scanning AWS account " + profile.Name + " with role " + profile.RoleArn)
+
+			aws_profile_session := session.Must(session.NewSessionWithOptions(session.Options{
+				SharedConfigState: session.SharedConfigEnable,
+				Config:            aws.Config{Region: aws.String("eu-west-3")},
+			}))
+
+			assumedRole := stscreds.NewCredentials(aws_profile_session, profile.RoleArn)
+
+			awsClient := ec2.New(aws_profile_session, &aws.Config{Credentials: assumedRole})
+
+			scans.AwsAccounts = append(scans.AwsAccounts, aws_account_scan(awsClient, assumedRole))
+		}
+	} else {
+		logger.Log.Info("No assumed roles found in config")
 	}
 
 	logger.Log.Info("writing data to storage")
@@ -66,7 +90,7 @@ func aws_account_scan(awsClient *ec2.EC2, assumedRole *credentials.Credentials) 
 		logger.Log.Error("aws region scan failure")
 		logger.Log.Error(err.Error())
 	} else {
-		// search for instances on every regions with go routines
+		// search for instances on each regions with a go routine
 
 		outputs := make(chan storage.Aws_region_scan, len(region_result.Regions))
 
@@ -74,13 +98,16 @@ func aws_account_scan(awsClient *ec2.EC2, assumedRole *credentials.Credentials) 
 			wg.Add(1)
 			regionName := *region_result.Regions[count].RegionName
 
-			//regionalAwsSessions := make(map[string]*session.Session)
-
 			regionalAwsSessions, _ := session.NewSessionWithOptions(session.Options{
 				Config: aws.Config{Region: aws.String(regionName)},
 			})
 
-			regionalEc2Client := ec2.New(regionalAwsSessions, &aws.Config{Credentials: assumedRole})
+			var regionalEc2Client *ec2.EC2
+			if assumedRole != nil {
+				regionalEc2Client = ec2.New(regionalAwsSessions, &aws.Config{Credentials: assumedRole})
+			} else {
+				regionalEc2Client = ec2.New(regionalAwsSessions)
+			}
 			go aws_region_scan(regionName, regionalEc2Client, outputs, &wg)
 		}
 
