@@ -5,6 +5,7 @@ import "time"
 type Aws_scans struct {
 	AwsScanDate time.Time
 	AwsAccounts []Aws_account_scan
+	AwsImages   []AwsImage
 }
 
 type Aws_account_scan struct {
@@ -15,7 +16,6 @@ type Aws_account_scan struct {
 type Aws_region_scan struct {
 	RegionName      string
 	VirtualMachines []VirtualMachine
-	AwsImages       []AwsImage
 }
 
 type VirtualMachine struct {
@@ -35,6 +35,7 @@ type VirtualMachine struct {
 
 type AwsImage struct {
 	Name            string
+	Region          string
 	ImageId         string
 	Description     string
 	OwnerId         string

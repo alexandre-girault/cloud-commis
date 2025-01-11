@@ -16,6 +16,8 @@ import (
 	"github.com/aws/aws-sdk-go/service/ec2"
 )
 
+var imageScans map[string]storage.AwsImage
+
 func ScheduledScan() {
 
 	var AwsTicker = time.NewTicker(time.Duration(config.ParsedData.Int("scanIntervalMin")) * time.Minute)
@@ -33,6 +35,7 @@ func ScheduledScan() {
 func Aws_instances_inventory() {
 
 	var scans storage.Aws_scans
+	imageScans = make(map[string]storage.AwsImage)
 	scans.AwsScanDate = time.Now()
 
 	//scan accounts with environment credentials
@@ -74,6 +77,11 @@ func Aws_instances_inventory() {
 		logger.Log.Info("No assumed roles found in config")
 	}
 
+	for awsImage := range imageScans {
+		logger.Log.Debug("awsImage: " + imageScans[awsImage].ImageId)
+		scans.AwsImages = append(scans.AwsImages, imageScans[awsImage])
+	}
+
 	logger.Log.Info("writing data to storage")
 	storage.Data.Write(scans)
 
@@ -93,6 +101,7 @@ func aws_account_scan(awsClient *ec2.EC2, assumedRole *credentials.Credentials) 
 
 		outputs := make(chan storage.Aws_region_scan, len(region_result.Regions))
 
+		var regionalEc2Client *ec2.EC2
 		for count := range region_result.Regions {
 			wg.Add(1)
 			regionName := *region_result.Regions[count].RegionName
@@ -101,7 +110,6 @@ func aws_account_scan(awsClient *ec2.EC2, assumedRole *credentials.Credentials) 
 				Config: aws.Config{Region: aws.String(regionName)},
 			})
 
-			var regionalEc2Client *ec2.EC2
 			if assumedRole != nil {
 				regionalEc2Client = ec2.New(regionalAwsSessions, &aws.Config{Credentials: assumedRole})
 			} else {
@@ -145,6 +153,18 @@ func aws_region_scan(aws_region string, awsClient *ec2.EC2, channel chan storage
 	} else {
 		logger.Log.Debug(result.String())
 		aws_region_scan_result = ec2ScanParse(result, aws_region)
+	}
+
+	// get details of AMIs
+	for _, vm := range aws_region_scan_result.VirtualMachines {
+
+		imageId, isScanned := imageScans[vm.ImageId]
+		if isScanned {
+			logger.Log.Debug("Image already scanned: " + imageId.ImageId)
+		} else {
+			logger.Log.Debug("Scanning image " + vm.ImageId)
+			imageScans[vm.ImageId] = awsAmiScan(awsClient, []string{vm.ImageId}, aws_region)[0]
+		}
 	}
 	channel <- aws_region_scan_result
 }
