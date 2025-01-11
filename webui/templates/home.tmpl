@@ -1,0 +1,76 @@
+<h4>found {{ .TotalVMs }} servers</h4>
+
+<div style="display:flex;flex-wrap:wrap">
+<div style="width:450px;height:300px">
+<!-- vm by region pie chart -->
+    <canvas id="regionChart" style="width:50%;max-width:450px"></canvas>
+    <script>
+
+    var xValues = [
+    {{ range $region, $vmsum := .SumVMByRegion }}
+      "{{ $region }}",
+    {{ end }}
+    ];
+
+    var yValues = [
+    {{ range $region, $vmsum := .SumVMByRegion }}
+      {{ $vmsum }},
+    {{ end }}
+    ];
+
+    var barColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+
+    new Chart("regionChart", {
+      type: "pie",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "servers per region"
+        }
+      }
+    });
+    </script>
+</div>
+<div style="width:450px;height:300px">
+    <canvas id="osChart" style="width:50%;max-width:450px"></canvas>
+
+    <script>
+    var xValues = ["ubuntu 20.04", "centos 7.0", "debian 10"];
+    var yValues = [55, 49, 44];
+    var barColors = ["red", "green","blue","orange","brown"];
+    
+    new Chart("osChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "Operating Systems"
+        }
+      }
+    });
+    </script>
+</div>
+
+</div>
+

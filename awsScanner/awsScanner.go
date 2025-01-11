@@ -26,7 +26,6 @@ func ScheduledScan() {
 		Aws_instances_inventory()
 	}
 
-	//ticker.Stop()
 	done <- true
 }
 
@@ -38,7 +37,7 @@ func Aws_instances_inventory() {
 
 	//scan accounts with environment credentials
 
-	accountId, identity, err := config.AwsGetIdentity()
+	accountId, identity, err := config.AwsGetIdentity(nil)
 	if err != nil {
 		logger.Log.Error("no valid aws credentials found")
 	} else {
@@ -116,7 +115,11 @@ func aws_account_scan(awsClient *ec2.EC2, assumedRole *credentials.Credentials) 
 
 		logger.Log.Info("End of AWS scan")
 
-		scan.AwsAccountID, _, _ = config.AwsGetIdentity()
+		if assumedRole != nil {
+			scan.AwsAccountID, _, _ = config.AwsGetIdentity(assumedRole)
+		} else {
+			scan.AwsAccountID, _, _ = config.AwsGetIdentity(nil)
+		}
 
 		for message := range len(region_result.Regions) {
 			scan.AwsRegions = append(scan.AwsRegions, <-outputs)

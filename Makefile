@@ -1,17 +1,26 @@
 BOOTSTRAP_VERSION=5.3.3
 -include .env
 export
+LD_FLAGS="-X 'cloud-commis/config.Version=$(VERSION)' -X 'cloud-commis/config.BuildDate=$(shell date)'"
+CGO_ARGS=CGO_ENABLED=0 GOOS=linux
 
 all: build
 
 .PHONY: build
-build:
+
+bin/cloudcommis-linux-amd64:
 	mkdir -p bin
-	CGO_ENABLED=0 go build \
-	-ldflags=" \
-	-X 'cloud-commis/config.Version=$$(cat version)-devel'\
-	-X 'cloud-commis/config.BuildDate=$$(date)'" \
-	-o bin/cloudcommis main.go
+	$(CGO_ARGS) GOARCH=amd64 go build \
+	-ldflags=$(LD_FLAGS) \
+	-o bin/cloudcommis-linux-amd64 main.go
+
+bin/cloudcommis-linux-arm64:
+	mkdir -p bin
+	$(CGO_ARGS) GOARCH=arm64 go build \
+	-ldflags=$(LD_FLAGS) \
+	-o bin/cloudcommis-linux-arm64 main.go
+
+build: bin/cloudcommis-linux-amd64 bin/cloudcommis-linux-arm64
 
 
 .PHONY: frontend-libs
@@ -35,6 +44,24 @@ test:
 
 lint:
 	docker run --rm -v $$(pwd):/app -w /app golangci/golangci-lint:v1.62.2 golangci-lint run -v
+	
+.PHONY: docker-buildx-config
+docker-buildx-config:
+	if docker buildx inspect localBuilder ; then \
+	echo "buildx builder OK" ; \
+	else echo "creating buildx builder " ; \
+	docker buildx create --driver docker-container --bootstrap --name localBuilder --use; fi
+	
+.PHONY: docker-build
+docker-build: docker-buildx-config
+	docker buildx build --no-cache --build-arg TARGET_ARCH=arm64 --provenance false --tag alexandregirault/cloud-commis:test-devel-arm64 \
+	--output type=image,push=true .
+	docker buildx build --no-cache --build-arg TARGET_ARCH=amd64 --provenance false --tag alexandregirault/cloud-commis:test-devel-amd64 \
+	--output type=image,push=true .
+	docker manifest create alexandregirault/cloud-commis:0.0.1-devel \
+	--amend alexandregirault/cloud-commis:test-devel-arm64 \
+	--amend alexandregirault/cloud-commis:test-devel-amd64
+	docker manifest push alexandregirault/cloud-commis:0.0.1-devel
 
 .PHONY: run
 run:
@@ -44,3 +71,8 @@ run:
 clean:
 	@rm -Rf bin/*
 	@rm -Rf tmp/*
+
+docker-clean:
+	docker rm -vf $$(docker ps -aq)
+	docker rmi -f $$(docker images -aq)
+	docker buildx rm localBuilder

@@ -2,28 +2,33 @@
 <thead>
   <tr>
     <th>Region</th>
+    <th>AwsAccountId</th>
     <th>InstanceId</th>
-	<th>Name</th>
-	<th>Architecture</th>
-	<th>PlatformDetails</th> 
-	<th>InstanceType</th>
-	<th>State</th>       
+	  <th>Name</th>
+	  <th>Architecture</th>
+	  <th>PlatformDetails</th> 
+	  <th>InstanceType</th>
+	  <th>State</th>       
   </tr>
 </thead>
 <tbody>
   {{ range . }}
-    {{$region := .RegionName}}
-    {{range .VirtualMachines}}
-    <tr>
-      <td>{{$region}}</td>
-      <td>{{ .InstanceId }}</td>
-	    <td>{{.Name}}</td>
-	    <td>{{.Architecture}}</td>
-	    <td>{{.PlatformDetails}}</td>  
-	    <td>{{.InstanceType}}</td>
-	    <td>{{.State}}</td>
-    </tr>
-  {{end}}
+    {{$accoundId := .AwsAccountID}}
+    {{ range .AwsRegions }}
+      {{$region := .RegionName}}    
+      {{range .VirtualMachines}}
+      <tr>
+        <td>{{$region}}</td>
+        <td>{{$accoundId}}</td>
+        <td>{{ .InstanceId }}</td>
+	      <td>{{.Name}}</td>
+	      <td>{{.Architecture}}</td>
+	      <td>{{.PlatformDetails}}</td>  
+	      <td>{{.InstanceType}}</td>
+	      <td>{{.State}}</td>
+      </tr>
+      {{end}}
+    {{end}}
   {{end}}
 </tbody>
 </table>

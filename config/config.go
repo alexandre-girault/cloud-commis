@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sts"
 	"github.com/knadh/koanf/parsers/yaml"
@@ -76,7 +77,7 @@ func Read(config *koanf.Koanf) {
 
 	}
 
-	_, profileInfo, err := AwsGetIdentity()
+	_, profileInfo, err := AwsGetIdentity(nil)
 	if err != nil {
 		logger.Log.Error(err.Error())
 	} else {
@@ -94,16 +95,23 @@ func Read(config *koanf.Koanf) {
 
 }
 
-func AwsGetIdentity() (int, string, error) {
+func AwsGetIdentity(assumedRole *credentials.Credentials) (int, string, error) {
 	aws_session := session.Must(session.NewSessionWithOptions(session.Options{
 		SharedConfigState: session.SharedConfigEnable,
 		Config:            aws.Config{Region: aws.String("eu-west-3")},
 	}))
-	svc := sts.New(aws_session)
+
+	var stscli *sts.STS
+	if assumedRole != nil {
+		aws_session.Config.Credentials = assumedRole
+		stscli = sts.New(aws_session, &aws.Config{Credentials: assumedRole})
+	} else {
+		stscli = sts.New(aws_session)
+	}
 
 	input := &sts.GetCallerIdentityInput{}
 
-	result, err := svc.GetCallerIdentity(input)
+	result, err := stscli.GetCallerIdentity(input)
 	if err != nil {
 		logger.Log.Error(err.Error())
 		return 0, "", err
@@ -111,7 +119,5 @@ func AwsGetIdentity() (int, string, error) {
 	} else {
 		accountId, _ := strconv.Atoi(*result.Account)
 		return accountId, *result.Arn, nil
-
 	}
-
 }
