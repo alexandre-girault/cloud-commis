@@ -1,10 +1,12 @@
-<div class="text-lg-start p-4" >Total VMs: {{ .TotalVMs }} </div>
 
-  <!-- <div style="display:flex;flex-wrap:wrap g-4 border"> <div style="width:450px;height:300px">-->
+
   <div class="container">
   
     <!-- vm by region pie chart -->
-    <div class="row" >
+    <div class="row">
+      <div class="col-md border p-3">
+        Total VMs: <p class="text-center fw-bold fs-2">{{ .TotalVMs }}</p>
+      </div>
       <div class="col-md border p-3">
         <canvas id="regionChart"></canvas>
         <script>
@@ -135,5 +137,5 @@
       </div>
     </div>
   </div>
-</div>
+
 
