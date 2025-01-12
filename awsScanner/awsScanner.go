@@ -4,7 +4,6 @@ import (
 	"cloud-commis/config"
 	"cloud-commis/logger"
 	"cloud-commis/storage"
-	"fmt"
 	"strconv"
 	"sync"
 	"time"
@@ -128,15 +127,12 @@ func aws_account_scan(awsClient *ec2.EC2, assumedRole *credentials.Credentials) 
 
 		logger.Log.Info("End of AWS scan")
 
-		for message := range len(region_result.Regions) {
-
+		for _ = range len(region_result.Regions) {
 			data := <-outputs
 			regions := maps.Keys(data)
 			for i := range regions {
 				scan.AwsRegions[regions[i]] = data[regions[i]]
 			}
-
-			logger.Log.Debug(fmt.Sprint(message))
 		}
 
 	}
@@ -160,17 +156,27 @@ func aws_region_scan(aws_region string, awsClient *ec2.EC2, channel chan map[str
 		aws_region_scan_result[aws_region] = ec2ScanParse(result)
 	}
 
-	// get details of AMIs
-	for _, vm := range aws_region_scan_result[aws_region].VirtualMachines {
+	for instanceId, instanceData := range aws_region_scan_result[aws_region].VirtualMachines {
 
-		_, isScanned := imageScans[vm.ImageId]
+		//get details from console Log
+		osInfo, kernelInfo := AwsConsoleLogOutput(awsClient, instanceId)
+		value, ok := aws_region_scan_result[aws_region].VirtualMachines[instanceId]
+		if ok {
+			value.BootImage = osInfo
+			value.KernelImage = kernelInfo
+			aws_region_scan_result[aws_region].VirtualMachines[instanceId] = value
+		}
+
+		// get AMI details
+		_, isScanned := imageScans[instanceData.ImageId]
 		if isScanned {
-			logger.Log.Debug("Image already scanned: " + vm.ImageId)
+			logger.Log.Debug("Image already scanned: " + instanceData.ImageId)
 		} else {
-			logger.Log.Debug("Scanning image " + vm.ImageId)
-			imageScans[vm.ImageId] = awsAmiScan(awsClient, []string{vm.ImageId}, aws_region)[0]
+			logger.Log.Debug("Scanning image " + instanceData.ImageId)
+			imageScans[instanceData.ImageId] = awsAmiScan(awsClient, []string{instanceData.ImageId}, aws_region)[0]
 		}
 	}
+
 	channel <- aws_region_scan_result
 }
 

@@ -89,37 +89,46 @@ func getVMDetails(writer http.ResponseWriter, request *http.Request) {
 
 func getHome(writer http.ResponseWriter, request *http.Request) {
 
-	//type stats struct {
-	//	TotalVMs      int
-	//	SumVMByRegion map[string]int
-	//}
+	type stats struct {
+		TotalVMs       int
+		SumVmByRegion  map[string]int
+		SumVmByType    map[string]int
+		SumVmByAccount map[int]int
+	}
 
 	writer.WriteHeader(http.StatusOK)
 
-	//jsonData, err := storage.Data.Read()
-	//if err != nil {
-	//	logger.Log.Error("Read storage failure")
-	//}
-	//
-	//homeStats := stats{}
-	//homeStats.SumVMByRegion = make(map[string]int)
-	//for _, account := range jsonData.AwsAccounts {
-	//	for _, region := range account.AwsRegions {
-	//
-	//		homeStats.TotalVMs += len(region.VirtualMachines)
-	//		if len(region.VirtualMachines) > 0 {
-	//			homeStats.SumVMByRegion[region.RegionName] += len(region.VirtualMachines)
-	//		}
-	//	}
-	//}
+	jsonData, err := storage.Data.Read()
+	if err != nil {
+		logger.Log.Error("Read storage failure")
+	}
 
-	//var templatesFS = fs.FS(templateFiles)
-	//
-	//tmpl := template.Must(template.ParseFS(templatesFS, "templates/home.tmpl"))
-	//tmplErr := tmpl.Execute(writer, homeStats)
-	//if tmplErr != nil {
-	//	logger.Log.Error("Cannot render template home.tmpl" + tmplErr.Error())
-	//}
+	homeStats := stats{}
+	homeStats.SumVmByRegion = make(map[string]int)
+	homeStats.SumVmByType = make(map[string]int)
+	homeStats.SumVmByAccount = make(map[int]int)
+
+	for accountId, accountData := range jsonData.AwsAccounts {
+		for region, regionData := range accountData.AwsRegions {
+
+			homeStats.TotalVMs += len(regionData.VirtualMachines)
+			if len(regionData.VirtualMachines) > 0 {
+				homeStats.SumVmByRegion[region] += len(regionData.VirtualMachines)
+			}
+			for _, vmData := range regionData.VirtualMachines {
+				homeStats.SumVmByType[vmData.InstanceType] += 1
+				homeStats.SumVmByAccount[accountId] += 1
+			}
+		}
+	}
+
+	var templatesFS = fs.FS(templateFiles)
+
+	tmpl := template.Must(template.ParseFS(templatesFS, "templates/home.tmpl"))
+	tmplErr := tmpl.Execute(writer, homeStats)
+	if tmplErr != nil {
+		logger.Log.Error("Cannot render template home.tmpl" + tmplErr.Error())
+	}
 }
 
 func getConfig(writer http.ResponseWriter, request *http.Request) {
