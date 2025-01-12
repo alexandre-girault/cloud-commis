@@ -1,6 +1,7 @@
-<table class="table table-striped" id="vmlist-table">
+<table class="table table-hover" id="vmlist-table">
 <thead>
   <tr>
+    <th></th>
     <th>Region</th>
     <th>AwsAccountId</th>
     <th>InstanceId</th>
@@ -12,16 +13,21 @@
   </tr>
 </thead>
 <tbody>
-  {{ range . }}
-    {{$accoundId := .AwsAccountID}}
-    {{ range .AwsRegions }}
-      {{$region := .RegionName}}    
-      {{range .VirtualMachines}}
+  {{ range $accountId, $data := .AwsAccounts }}
+    {{ range $region, $data := .AwsRegions }}   
+      {{range $instanceId, $data := .VirtualMachines }}
       <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefault{{ $instanceId }}"
+            hx-get="/vmdetails/{{ $accountId }}/{{ $region }}/{{ $instanceId }}" 
+            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+          </div>
+        </td>
         <td>{{$region}}</td>
-        <td>{{$accoundId}}</td>
-        <td>{{ .InstanceId }}</td>
-	      <td>{{.Name}}</td>
+        <td>{{$accountId}}</td>
+        <td>{{ $instanceId }}</td>
+	      <td></td>
 	      <td>{{.Architecture}}</td>
 	      <td>{{.PlatformDetails}}</td>  
 	      <td>{{.InstanceType}}</td>
@@ -35,3 +41,6 @@
 <script>
 $('#vmlist-table').DataTable();
 </script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>

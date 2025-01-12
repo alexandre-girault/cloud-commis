@@ -14,6 +14,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/credentials/stscreds"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ec2"
+	"golang.org/x/exp/maps"
 )
 
 var imageScans map[string]storage.AwsImage
@@ -35,6 +36,8 @@ func ScheduledScan() {
 func Aws_instances_inventory() {
 
 	var scans storage.Aws_scans
+	scans.AwsAccounts = make(map[int]storage.Aws_account_scan)
+	scans.AwsImages = make(map[string]storage.AwsImage)
 	imageScans = make(map[string]storage.AwsImage)
 	scans.AwsScanDate = time.Now()
 
@@ -53,7 +56,7 @@ func Aws_instances_inventory() {
 
 		awsClient := ec2.New(aws_session)
 
-		scans.AwsAccounts = append(scans.AwsAccounts, aws_account_scan(awsClient, nil))
+		scans.AwsAccounts[accountId] = aws_account_scan(awsClient, nil)
 	}
 
 	//scan accounts with assumed roles from config
@@ -71,15 +74,16 @@ func Aws_instances_inventory() {
 
 			awsClient := ec2.New(aws_profile_session, &aws.Config{Credentials: assumedRole})
 
-			scans.AwsAccounts = append(scans.AwsAccounts, aws_account_scan(awsClient, assumedRole))
+			accountID, _, _ := config.AwsGetIdentity(assumedRole)
+			scans.AwsAccounts[accountID] = aws_account_scan(awsClient, assumedRole)
 		}
 	} else {
 		logger.Log.Info("No assumed roles found in config")
 	}
 
 	for awsImage := range imageScans {
-		logger.Log.Debug("awsImage: " + imageScans[awsImage].ImageId)
-		scans.AwsImages = append(scans.AwsImages, imageScans[awsImage])
+		logger.Log.Debug("awsImage: " + imageScans[awsImage].Name)
+		scans.AwsImages[awsImage] = imageScans[awsImage]
 	}
 
 	logger.Log.Info("writing data to storage")
@@ -91,6 +95,7 @@ func aws_account_scan(awsClient *ec2.EC2, assumedRole *credentials.Credentials) 
 
 	var scan storage.Aws_account_scan
 	var wg sync.WaitGroup
+	scan.AwsRegions = make(map[string]storage.Aws_region_scan)
 
 	region_result, err := awsClient.DescribeRegions(nil)
 	if err != nil {
@@ -99,7 +104,7 @@ func aws_account_scan(awsClient *ec2.EC2, assumedRole *credentials.Credentials) 
 	} else {
 		// search for instances on each regions with a go routine
 
-		outputs := make(chan storage.Aws_region_scan, len(region_result.Regions))
+		outputs := make(chan map[string]storage.Aws_region_scan, len(region_result.Regions))
 
 		var regionalEc2Client *ec2.EC2
 		for count := range region_result.Regions {
@@ -123,14 +128,14 @@ func aws_account_scan(awsClient *ec2.EC2, assumedRole *credentials.Credentials) 
 
 		logger.Log.Info("End of AWS scan")
 
-		if assumedRole != nil {
-			scan.AwsAccountID, _, _ = config.AwsGetIdentity(assumedRole)
-		} else {
-			scan.AwsAccountID, _, _ = config.AwsGetIdentity(nil)
-		}
-
 		for message := range len(region_result.Regions) {
-			scan.AwsRegions = append(scan.AwsRegions, <-outputs)
+
+			data := <-outputs
+			regions := maps.Keys(data)
+			for i := range regions {
+				scan.AwsRegions[regions[i]] = data[regions[i]]
+			}
+
 			logger.Log.Debug(fmt.Sprint(message))
 		}
 
@@ -138,13 +143,13 @@ func aws_account_scan(awsClient *ec2.EC2, assumedRole *credentials.Credentials) 
 	return scan
 }
 
-func aws_region_scan(aws_region string, awsClient *ec2.EC2, channel chan storage.Aws_region_scan, wg *sync.WaitGroup) {
+func aws_region_scan(aws_region string, awsClient *ec2.EC2, channel chan map[string]storage.Aws_region_scan, wg *sync.WaitGroup) {
 
 	defer wg.Done()
 	logger.Log.Debug("scanning region " + aws_region)
 
-	var aws_region_scan_result storage.Aws_region_scan
-	aws_region_scan_result.RegionName = *awsClient.Config.Region
+	aws_region_scan_result := make(map[string]storage.Aws_region_scan)
+	//aws_region_scan_result.RegionName = *awsClient.Config.Region
 
 	// Call to get detailed information on each instance
 	result, err := awsClient.DescribeInstances(nil)
@@ -152,15 +157,15 @@ func aws_region_scan(aws_region string, awsClient *ec2.EC2, channel chan storage
 		logger.Log.Error("Error" + err.Error())
 	} else {
 		logger.Log.Debug(result.String())
-		aws_region_scan_result = ec2ScanParse(result, aws_region)
+		aws_region_scan_result[aws_region] = ec2ScanParse(result)
 	}
 
 	// get details of AMIs
-	for _, vm := range aws_region_scan_result.VirtualMachines {
+	for _, vm := range aws_region_scan_result[aws_region].VirtualMachines {
 
-		imageId, isScanned := imageScans[vm.ImageId]
+		_, isScanned := imageScans[vm.ImageId]
 		if isScanned {
-			logger.Log.Debug("Image already scanned: " + imageId.ImageId)
+			logger.Log.Debug("Image already scanned: " + vm.ImageId)
 		} else {
 			logger.Log.Debug("Scanning image " + vm.ImageId)
 			imageScans[vm.ImageId] = awsAmiScan(awsClient, []string{vm.ImageId}, aws_region)[0]
@@ -169,17 +174,18 @@ func aws_region_scan(aws_region string, awsClient *ec2.EC2, channel chan storage
 	channel <- aws_region_scan_result
 }
 
-func ec2ScanParse(result *ec2.DescribeInstancesOutput, aws_region string) storage.Aws_region_scan {
+func ec2ScanParse(result *ec2.DescribeInstancesOutput) storage.Aws_region_scan {
 
 	var parsedOutput storage.Aws_region_scan
-
-	parsedOutput.RegionName = aws_region
+	parsedOutput.VirtualMachines = make(map[string]storage.VirtualMachine)
+	var instanceId string
 
 	for reservation := range result.Reservations {
 		for instance := range result.Reservations[reservation].Instances {
+			instanceId = *result.Reservations[reservation].Instances[instance].InstanceId
 			logger.Log.Info("found virtualmachine " + *result.Reservations[reservation].Instances[instance].InstanceId)
 			found_vm := storage.VirtualMachine{
-				InstanceId:               *result.Reservations[reservation].Instances[instance].InstanceId,
+				//InstanceId:               *result.Reservations[reservation].Instances[instance].InstanceId,
 				Architecture:             *result.Reservations[reservation].Instances[instance].Architecture,
 				LaunchTime:               *result.Reservations[reservation].Instances[instance].LaunchTime,
 				UsageOperationUpdateTime: *result.Reservations[reservation].Instances[instance].UsageOperationUpdateTime,
@@ -195,7 +201,7 @@ func ec2ScanParse(result *ec2.DescribeInstancesOutput, aws_region string) storag
 				}
 			}
 
-			parsedOutput.VirtualMachines = append(parsedOutput.VirtualMachines, found_vm)
+			parsedOutput.VirtualMachines[instanceId] = found_vm
 		}
 	}
 	logger.Log.Debug("End of data parsing")

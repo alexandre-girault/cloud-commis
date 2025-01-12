@@ -4,22 +4,19 @@ import "time"
 
 type Aws_scans struct {
 	AwsScanDate time.Time
-	AwsAccounts []Aws_account_scan
-	AwsImages   []AwsImage
+	AwsAccounts map[int]Aws_account_scan
+	AwsImages   map[string]AwsImage
 }
 
 type Aws_account_scan struct {
-	AwsAccountID int
-	AwsRegions   []Aws_region_scan
+	AwsRegions map[string]Aws_region_scan
 }
 
 type Aws_region_scan struct {
-	RegionName      string
-	VirtualMachines []VirtualMachine
+	VirtualMachines map[string]VirtualMachine
 }
 
 type VirtualMachine struct {
-	InstanceId               string
 	Name                     string
 	Architecture             string
 	LaunchTime               time.Time
@@ -36,7 +33,6 @@ type VirtualMachine struct {
 type AwsImage struct {
 	Name            string
 	Region          string
-	ImageId         string
 	Description     string
 	OwnerId         string
 	DeprecationTime string

@@ -23,7 +23,6 @@ func awsAmiScan(awsClient *ec2.EC2, imageIds []string, region string) []storage.
 			foundAmi := &storage.AwsImage{
 				Name:            *result.Images[Ami].Name,
 				Region:          region,
-				ImageId:         *result.Images[Ami].ImageId,
 				Description:     *result.Images[Ami].Description,
 				OwnerId:         *result.Images[Ami].OwnerId,
 				DeprecationTime: *result.Images[Ami].DeprecationTime,
