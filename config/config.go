@@ -39,7 +39,7 @@ func Read(config *koanf.Koanf) {
 		"configPath":       defaultConfigPath,
 		"disable_ui":       false,
 		"httpPort":         8080,
-		"localStoragePath": "/data/cloud-commis",
+		"localStoragePath": "/data/cloud-commis/",
 		"loglevel":         "info",
 		"s3BucketName":     "",
 		"s3BucketPath":     "",
