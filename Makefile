@@ -1,8 +1,10 @@
 BOOTSTRAP_VERSION=5.3.3
 -include .env
 export
-LD_FLAGS="-X 'cloud-commis/config.Version=$(VERSION)' -X 'cloud-commis/config.BuildDate=$(shell date)'"
+APP_VERSION := $(shell git describe --tags)
+LD_FLAGS="-X 'cloud-commis/config.Version=$(APP_VERSION)' -X 'cloud-commis/config.BuildDate=$(shell date)'"
 CGO_ARGS=CGO_ENABLED=0 GOOS=linux
+
 
 all: build
 
@@ -21,6 +23,7 @@ bin/cloudcommis-linux-arm64:
 	-o bin/cloudcommis-linux-arm64 main.go
 
 build: bin/cloudcommis-linux-amd64 bin/cloudcommis-linux-arm64
+	@echo build version $(APP_VERSION)
 
 
 .PHONY: frontend-libs
@@ -54,14 +57,18 @@ docker-buildx-config:
 	
 .PHONY: docker-build
 docker-build: docker-buildx-config
-	docker buildx build --no-cache --build-arg TARGET_ARCH=arm64 --provenance false --tag alexandregirault/cloud-commis:test-devel-arm64 \
-	--output type=image,push=true .
-	docker buildx build --no-cache --build-arg TARGET_ARCH=amd64 --provenance false --tag alexandregirault/cloud-commis:test-devel-amd64 \
-	--output type=image,push=true .
-	docker manifest create alexandregirault/cloud-commis:0.0.1-devel \
-	--amend alexandregirault/cloud-commis:test-devel-arm64 \
-	--amend alexandregirault/cloud-commis:test-devel-amd64
-	docker manifest push alexandregirault/cloud-commis:0.0.1-devel
+	docker buildx build --no-cache --build-arg TARGET_ARCH=arm64 --provenance false --tag alexandregirault/cloud-commis:$(APP_VERSION)-devel-arm64 \
+	--output type=image .
+	docker buildx build --no-cache --build-arg TARGET_ARCH=amd64 --provenance false --tag alexandregirault/cloud-commis:$(APP_VERSION)-devel-amd64 \
+	--output type=image .
+
+docker-push: docker-build
+	docker push alexandregirault/cloud-commis:$(APP_VERSION)-devel-arm64
+	docker push alexandregirault/cloud-commis:$(APP_VERSION)-devel-amd64
+	docker manifest create alexandregirault/cloud-commis:$(APP_VERSION) \
+	--amend alexandregirault/cloud-commis:$(APP_VERSION)-arm64 \
+	--amend alexandregirault/cloud-commis:$(APP_VERSION)-amd64
+	docker manifest push alexandregirault/cloud-commis:$(APP_VERSION)
 
 .PHONY: run
 run:
