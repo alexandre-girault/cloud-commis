@@ -22,7 +22,7 @@ bin/cloudcommis-linux-arm64:
 	-ldflags=$(LD_FLAGS) \
 	-o bin/cloudcommis-linux-arm64 main.go
 
-build: bin/cloudcommis-linux-amd64 bin/cloudcommis-linux-arm64
+build: clean bin/cloudcommis-linux-amd64 bin/cloudcommis-linux-arm64
 	@echo build version $(APP_VERSION)
 
 
@@ -57,22 +57,29 @@ docker-buildx-config:
 	
 .PHONY: docker-build
 docker-build: docker-buildx-config
-	docker buildx build --no-cache --build-arg TARGET_ARCH=arm64 --provenance false --tag alexandregirault/cloud-commis:$(APP_VERSION)-devel-arm64 \
-	--output type=image .
-	docker buildx build --no-cache --build-arg TARGET_ARCH=amd64 --provenance false --tag alexandregirault/cloud-commis:$(APP_VERSION)-devel-amd64 \
-	--output type=image .
+	docker buildx build --no-cache --build-arg TARGET_ARCH=arm64 --provenance false --tag alexandregirault/cloud-commis:$(APP_VERSION)-arm64 \
+	--output type=docker .
+	docker buildx build --no-cache --build-arg TARGET_ARCH=amd64 --provenance false --tag alexandregirault/cloud-commis:$(APP_VERSION)-amd64 \
+	--output type=docker .
 
 docker-push: docker-build
-	docker push alexandregirault/cloud-commis:$(APP_VERSION)-devel-arm64
-	docker push alexandregirault/cloud-commis:$(APP_VERSION)-devel-amd64
+	docker push alexandregirault/cloud-commis:$(APP_VERSION)-arm64
+	docker push alexandregirault/cloud-commis:$(APP_VERSION)-amd64
 	docker manifest create alexandregirault/cloud-commis:$(APP_VERSION) \
 	--amend alexandregirault/cloud-commis:$(APP_VERSION)-arm64 \
 	--amend alexandregirault/cloud-commis:$(APP_VERSION)-amd64
+	docker manifest create alexandregirault/cloud-commis:latest \
+	--amend alexandregirault/cloud-commis:$(APP_VERSION)-arm64 \
+	--amend alexandregirault/cloud-commis:$(APP_VERSION)-amd64
 	docker manifest push alexandregirault/cloud-commis:$(APP_VERSION)
+	docker manifest push alexandregirault/cloud-commis:latest
 
 .PHONY: run
 run:
-	go run main.go --config=config.yaml
+	go run \
+	-ldflags=$(LD_FLAGS) \
+	main.go \
+	--config=config.yaml
 
 .PHONY: clean
 clean:

@@ -16,8 +16,12 @@ func main() {
 	// Start
 	logger.Log.Info("loglevel = " + config.ParsedData.String("loglevel"))
 	logger.SetLogLevel(config.ParsedData.String("loglevel"))
-	logger.Log.Info("scan_interval_min : " + config.ParsedData.String("scan_interval_min"))
-	storage.Configure()
+	logger.Log.Info("scan_interval_min : " + config.ParsedData.String("scanIntervalMin"))
+
+	if !storage.Configure() {
+		logger.Log.Info("No data found, triggering a first scan now")
+		awsScanner.Aws_instances_inventory()
+	}
 
 	go awsScanner.ScheduledScan()
 	router := http.NewServeMux()

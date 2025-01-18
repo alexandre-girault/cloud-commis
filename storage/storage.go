@@ -3,6 +3,7 @@ package storage
 import (
 	"cloud-commis/config"
 	"cloud-commis/logger"
+	"os"
 )
 
 type Storage interface {
@@ -13,7 +14,7 @@ type Storage interface {
 
 var Data Storage
 
-func Configure() {
+func Configure() bool {
 	dataDir := config.ParsedData.String("localStoragePath")
 
 	switch config.ParsedData.String("storage") {
@@ -22,10 +23,15 @@ func Configure() {
 		logger.Log.Info("Using local filesystem as storage")
 		logger.Log.Info("Local file is " + dataDir + localFileName)
 		Data = localStorage{}
+		if _, err := os.Stat(dataDir + localFileName); err != nil {
+			logger.Log.Info("Using " + dataDir + localFileName + " as storage")
+			return false
+		}
 
 	case "s3":
 		logger.Log.Info("Using s3 bucket as storage")
 
 	}
 
+	return true
 }
