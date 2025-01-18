@@ -17,18 +17,24 @@
   <body>
 
   <header>
-    <div class="container">
-      <div class="text-bg-dark">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start p-2">
-          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-            <img class="img-fluid" src="cc-40px.png" alt=""></svg>
-          </a>
-          <h2 class="d-flex align-items-center my-2 my-lg-0 me-lg-auto"> Cloud Commis</h2>
+    <div class="container-fluid">
+      <div class="row text-bg-dark d-flex justify-content-between align-items-center">
+        <div class="col p-2 text-start">
+            <img class="img-fluid rounded align-middle" src="./cc-40px.png" alt="">
+        </div>
+        <div class="col p-2">
+          <h2 class="text-center">Cloud Commis</h2>
+        </div>
+        <div class="col p-2" hx-get="/version" hx-trigger="load" hx-target="#version" hx-swap="innerHTML">
+          <p class="text-end" id="version">
+          </p>
         </div>
       </div>
     </div>
   </header>
-  <main class="container">
+
+
+  <main class="container-fluid p-2">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="home-tab" data-bs-toggle="tab" 
@@ -55,18 +61,20 @@
               </button>
             </li>
           </ul>
-          <div class="tab-content" id="myTabContent">
+          <div class="tab-content d-flex justify-content-center align-items-center p-5" id="myTabContent">
             <div 
-              class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              class="tab-pane fade mx-5 w-75 show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             </div>
             <div 
-              class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="search-tab">
+              class="tab-pane fade mx-5 w-75" id="search" role="tabpanel" aria-labelledby="search-tab">
             </div>
             <div 
-              class="tab-pane fade" id="config" role="tabpanel" aria-labelledby="config-tab">
+              class="tab-pane fade mx-5 " id="config" role="tabpanel" aria-labelledby="config-tab" style="width: 600px;">
             </div>
           </div>
 </main>
+
+
 
 <!-- dark mode toggle -->
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">

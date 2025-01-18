@@ -43,7 +43,6 @@ func (flagConfig *flagConfig) Read() {
 				strings.HasPrefix(buildInfo.Settings[setting].Key, "GOOS") {
 				fmt.Println(buildInfo.Settings[setting].Key + " \t" + buildInfo.Settings[setting].Value)
 			}
-
 		}
 
 		os.Exit(0)

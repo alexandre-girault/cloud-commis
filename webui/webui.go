@@ -6,6 +6,7 @@ import (
 	"cloud-commis/storage"
 	"embed"
 	"encoding/json"
+	"fmt"
 	"io/fs"
 	"log"
 	"net/http"
@@ -21,6 +22,14 @@ var templateFiles embed.FS
 
 type RootPageData struct {
 	UserEmail string
+}
+
+func getVersion(writer http.ResponseWriter, request *http.Request) {
+
+	writer.WriteHeader(http.StatusOK)
+	fmt.Println(config.Version)
+
+	writer.Write([]byte(config.Version))
 }
 
 func getVM(writer http.ResponseWriter, request *http.Request) {
@@ -153,6 +162,7 @@ func Start(router *http.ServeMux) {
 	router.HandleFunc("GET /config", getConfig)
 	router.HandleFunc("GET /home", getHome)
 	router.HandleFunc("GET /vmlist", getVM)
+	router.HandleFunc("GET /version", getVersion)
 	router.HandleFunc("GET /vmdetails/{awsaccount}/{region}/{vmid}", getVMDetails)
 
 }
