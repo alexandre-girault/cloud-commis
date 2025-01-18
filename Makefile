@@ -14,13 +14,13 @@ bin/cloudcommis-linux-amd64:
 	mkdir -p bin
 	$(CGO_ARGS) GOARCH=amd64 go build \
 	-ldflags=$(LD_FLAGS) \
-	-o bin/cloudcommis-linux-amd64 main.go
+	-o bin/cloudcommis-linux-$(APP_VERSION)-amd64 main.go
 
 bin/cloudcommis-linux-arm64:
 	mkdir -p bin
 	$(CGO_ARGS) GOARCH=arm64 go build \
 	-ldflags=$(LD_FLAGS) \
-	-o bin/cloudcommis-linux-arm64 main.go
+	-o bin/cloudcommis-linux-$(APP_VERSION)-arm64 main.go
 
 build: clean bin/cloudcommis-linux-amd64 bin/cloudcommis-linux-arm64
 	@echo build version $(APP_VERSION)
