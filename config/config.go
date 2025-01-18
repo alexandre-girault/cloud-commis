@@ -86,11 +86,12 @@ func Read(config *koanf.Koanf) {
 
 	// yaml config is overwrittent by env
 	err = config.Load(env.Provider("CC_", ".", func(s string) string {
-		return strings.Replace(strings.ToLower(
-			strings.TrimPrefix(s, "CC_")), "_", ".", -1)
+		return strings.Replace(
+			strings.TrimPrefix(s, "CC_"), "_", ".", -1)
 	}), nil)
+
 	if err != nil {
-		logger.Log.Error(err.Error())
+		logger.Log.Error("Error Parsing ENV Variabbles " + err.Error())
 	}
 
 }

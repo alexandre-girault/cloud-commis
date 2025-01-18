@@ -6,7 +6,6 @@ import (
 	"cloud-commis/storage"
 	"embed"
 	"encoding/json"
-	"fmt"
 	"io/fs"
 	"log"
 	"net/http"
@@ -27,7 +26,6 @@ type RootPageData struct {
 func getVersion(writer http.ResponseWriter, request *http.Request) {
 
 	writer.WriteHeader(http.StatusOK)
-	fmt.Println(config.Version)
 
 	writer.Write([]byte(config.Version))
 }
