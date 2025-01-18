@@ -1,0 +1,125 @@
+{
+    "Reservations": [{
+        "Instances": [{
+            "AmiLaunchIndex": 0,
+            "Architecture": "arm64",
+            "BlockDeviceMappings": [{
+                "DeviceName": "/dev/xvda",
+                "Ebs": {
+                  "AttachTime": "2024-01-02T15:04:05Z",
+                  "DeleteOnTermination": true,
+                  "Status": "attached",
+                  "VolumeId": "vol-0cdd78ae00fc3ab96"
+                }
+              }],
+            "BootMode": "uefi",
+            "CapacityReservationSpecification": {
+              "CapacityReservationPreference": "open"
+            },
+            "ClientToken": "94243f6b-0311-41ba-81c1-5b1d6aea8c22",
+            "CpuOptions": {
+              "CoreCount": 2,
+              "ThreadsPerCore": 1
+            },
+            "CurrentInstanceBootMode": "uefi",
+            "EbsOptimized": true,
+            "EnaSupport": true,
+            "EnclaveOptions": {
+              "Enabled": false
+            },
+            "HibernationOptions": {
+              "Configured": false
+            },
+            "Hypervisor": "xen",
+            "ImageId": "ami-01c5300f289d64643",
+            "InstanceId": "i-08cb2bdddc801f6d8",
+            "InstanceType": "t4g.nano",
+            "LaunchTime": "2024-01-02T15:04:05Z",
+            "MaintenanceOptions": {
+              "AutoRecovery": "default"
+            },
+            "MetadataOptions": {
+              "HttpEndpoint": "enabled",
+              "HttpProtocolIpv6": "disabled",
+              "HttpPutResponseHopLimit": 2,
+              "HttpTokens": "required",
+              "InstanceMetadataTags": "disabled",
+              "State": "applied"
+            },
+            "Monitoring": {
+              "State": "disabled"
+            },
+            "NetworkInterfaces": [{
+                "Attachment": {
+                  "AttachTime": "2024-01-02T15:04:05Z",
+                  "AttachmentId": "eni-attach-0f15145abf6e4d953",
+                  "DeleteOnTermination": true,
+                  "DeviceIndex": 0,
+                  "NetworkCardIndex": 0,
+                  "Status": "attached"
+                },
+                "Description": "",
+                "Groups": [{
+                    "GroupId": "sg-0e5d6f6744e733679",
+                    "GroupName": "launch-wizard-8"
+                  }],
+                "InterfaceType": "interface",
+                "MacAddress": "0e:39:c7:48:e1:65",
+                "NetworkInterfaceId": "eni-02ccef839e2e7a7d8",
+                "OwnerId": "767410294669",
+                "PrivateDnsName": "ip-172-31-36-121.eu-west-3.compute.internal",
+                "PrivateIpAddress": "172.31.36.121",
+                "PrivateIpAddresses": [{
+                    "Primary": true,
+                    "PrivateDnsName": "ip-172-31-36-121.eu-west-3.compute.internal",
+                    "PrivateIpAddress": "172.31.36.121"
+                  }],
+                "SourceDestCheck": true,
+                "Status": "in-use",
+                "SubnetId": "subnet-6e841123",
+                "VpcId": "vpc-c57e7cac"
+              }],
+            "Placement": {
+              "AvailabilityZone": "eu-west-3c",
+              "GroupName": "",
+              "Tenancy": "default"
+            },
+            "PlatformDetails": "Linux/UNIX",
+            "PrivateDnsName": "ip-172-31-36-121.eu-west-3.compute.internal",
+            "PrivateDnsNameOptions": {
+              "EnableResourceNameDnsAAAARecord": false,
+              "EnableResourceNameDnsARecord": true,
+              "HostnameType": "ip-name"
+            },
+            "PrivateIpAddress": "172.31.36.121",
+            "PublicDnsName": "",
+            "RootDeviceName": "/dev/xvda",
+            "RootDeviceType": "ebs",
+            "SecurityGroups": [{
+                "GroupId": "sg-0e5d6f6744e733679",
+                "GroupName": "launch-wizard-8"
+              }],
+            "SourceDestCheck": true,
+            "State": {
+              "Code": 80,
+              "Name": "stopped"
+            },
+            "StateReason": {
+              "Code": "Client.UserInitiatedShutdown",
+              "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+            },
+            "StateTransitionReason": "User initiated (2024-10-27 09:03:15 GMT)",
+            "SubnetId": "subnet-6e841123",
+            "Tags": [{
+                "Key": "Name",
+                "Value": "aws-ec2-test-vm"
+              }],
+            "sageOperation": "RunInstances",
+            "UsageOperationUpdateTime": "2024-01-02T15:04:05Z",
+            "VirtualizationType": "hvm",
+            "VpcId": "vpc-c57e7cac"
+          }],
+        "OwnerId": "767410294669",
+        "ReservationId": "r-0a6baa0e0c3f104d9"
+      }]
+  }
