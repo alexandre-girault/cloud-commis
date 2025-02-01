@@ -25,7 +25,7 @@
         <div class="col p-2">
           <h2 class="text-center">Cloud Commis</h2>
         </div>
-        <div class="col p-2" hx-get="/version" hx-trigger="load" hx-target="#version" hx-swap="innerHTML">
+        <div class="col p-2" hx-get="/cloud-commis/version" hx-trigger="load" hx-target="#version" hx-swap="innerHTML">
           <p class="text-end" id="version">
           </p>
         </div>
@@ -40,7 +40,7 @@
               <button class="nav-link active" id="home-tab" data-bs-toggle="tab" 
                       data-bs-target="#home" type="button" role="tab" 
                       aria-controls="home" aria-selected="true"
-                      hx-get="/cloud-commis/home" hx-trigger="load" hx-target="#home" hx-swap="innerHTML">
+                      hx-get="/cloud-commis/cloud-commis/home" hx-trigger="load" hx-target="#home" hx-swap="innerHTML">
                       Home
               </button>
             </li>
@@ -48,7 +48,7 @@
               <button class="nav-link" id="search-tab" data-bs-toggle="tab" 
                       data-bs-target="#search" type="button" role="tab" 
                       aria-controls="search" aria-selected="false"
-                      hx-get="/vmlist" hx-trigger="click" hx-target="#search" hx-swap="innerHTML">
+                      hx-get="/cloud-commis/vmlist" hx-trigger="click" hx-target="#search" hx-swap="innerHTML">
                       search
               </button>
             </li>
@@ -56,7 +56,7 @@
               <button class="nav-link" id="config-tab" data-bs-toggle="tab" 
                       data-bs-target="#config" type="button" role="tab" 
                       aria-controls="config" aria-selected="false"
-                      hx-get="/config" hx-trigger="click" hx-target="#config" hx-swap="innerHTML">
+                      hx-get="/cloud-commis/config" hx-trigger="click" hx-target="#config" hx-swap="innerHTML">
                       config
               </button>
             </li>
