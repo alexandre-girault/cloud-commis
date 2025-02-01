@@ -1,0 +1,120 @@
+<div class="container-fluid">
+<table class="table table-hover" id="vmlist-table">
+<thead>
+  <tr>
+    <th></th>
+    <th>Region</th>
+    <th>AwsAccountId</th>
+    <th>InstanceId</th>
+	  <th>Name</th>
+	  <th>Architecture</th>
+	  <th>PlatformDetails</th> 
+	  <th>InstanceType</th>
+	  <th>State</th>       
+  </tr>
+</thead>
+<tbody>
+  
+       
+      
+       
+      
+       
+      
+       
+      
+       
+      
+       
+      
+       
+      
+       
+      
+       
+      
+       
+      
+       
+      
+       
+      
+       
+      
+       
+      
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-08cb2bdddc801f6d8"
+            hx-get="/vmdetails/767410294669/eu-west-3/i-08cb2bdddc801f6d8" 
+            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+          </div>
+        </td>
+        <td>eu-west-3</td>
+        <td>767410294669</td>
+        <td>i-08cb2bdddc801f6d8</td>
+	      <td>test</td>
+	      <td>arm64</td>
+	      <td>Linux/UNIX</td>  
+	      <td>t4g.nano</td>
+	      <td>stopped</td>
+      </tr>
+      
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51defe2"
+            hx-get="/vmdetails/767410294669/eu-west-3/i-0d2941b87e51defe2" 
+            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+          </div>
+        </td>
+        <td>eu-west-3</td>
+        <td>767410294669</td>
+        <td>i-0d2941b87e51defe2</td>
+	      <td>test2</td>
+	      <td>x86_64</td>
+	      <td>Linux/UNIX</td>  
+	      <td>t2.micro</td>
+	      <td>stopped</td>
+      </tr>
+      
+       
+      
+       
+      
+       
+      
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-038548abed084b347"
+            hx-get="/vmdetails/767410294669/us-east-2/i-038548abed084b347" 
+            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+          </div>
+        </td>
+        <td>us-east-2</td>
+        <td>767410294669</td>
+        <td>i-038548abed084b347</td>
+	      <td>testOhio</td>
+	      <td>x86_64</td>
+	      <td>Red Hat Enterprise Linux</td>  
+	      <td>t2.micro</td>
+	      <td>stopped</td>
+      </tr>
+      
+       
+      
+       
+      
+    
+  
+</tbody>
+</table>
+</div>
+<script>
+$('#vmlist-table').DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>

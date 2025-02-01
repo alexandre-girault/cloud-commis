@@ -1,0 +1,149 @@
+
+
+  <div class="container-fluid">
+  
+    <!-- vm by region pie chart -->
+    <div class="row">
+      <div class="col-md border p-3">
+        Total VMs: <p class="text-center fw-bold fs-2">3</p>
+      </div>
+      <div class="col-md border p-3">
+        <canvas id="regionChart"></canvas>
+        <script>
+    
+        var xValues = [
+        
+          "eu-west-3",
+        
+          "us-east-2",
+        
+        ];
+    
+        var yValues = [
+        
+          2,
+        
+          1,
+        
+        ];
+    
+        var barColors = [
+          "#b91d47",
+          "#00aba9",
+          "#2b5797",
+          "#e8c3b9",
+          "#1e7145"
+        ];
+    
+        new Chart("regionChart", {
+          type: "pie",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            title: {
+              display: true,
+              text: "servers per region"
+            }
+          }
+        });
+        </script>
+      </div>
+    
+    <!-- vm by type bar chart -->
+      <div class="col-md border p-3" >
+        <canvas id="instanceTypeChart" style="height: 400px; width: 400;"></canvas>
+    
+        <script>
+        var xaccounts = [
+        
+          "t2.micro",
+        
+          "t4g.nano",
+        
+        ];
+        var yacccount = [
+        
+          2,
+        
+          1,
+        
+        ];
+        var barColors = ["red", "green","blue","orange","brown"];
+        
+        new Chart("instanceTypeChart", {
+          type: "bar",
+          data: {
+            labels: xaccounts,
+            datasets: [{
+              label: "VMs by type",
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            title: {
+              display: true,
+              text: "Instance types"
+            },
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        </script>
+      </div>
+    
+    <!-- vm by Account bar chart -->
+      <div class="col-md border p-3">
+        <canvas id="AccountChart" style="height: 400px; width: 400;"></canvas>
+    
+        <script>
+        var xaccounts = [
+        
+          "767410294669",
+        
+        ];
+        var yacccount = [
+        
+          3,
+        
+        ];
+        var barColors = ["red", "green","blue","orange","brown"];
+        
+        new Chart("AccountChart", {
+          type: "bar",
+          data: {
+            labels: xaccounts,
+            datasets: [{
+              label: "VMs by AWS accounts",
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            title: {
+              display: true,
+              text: "AWS accounts"
+            },
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        </script>
+      </div>
+    </div>
+  </div>
+
+

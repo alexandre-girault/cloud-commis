@@ -1,0 +1,66 @@
+<table class="table table-striped table-bordered" id="config-table">
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Value</th>    
+      </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+          <td>awsAssumedRoles</td>
+          <td><no value></td>
+        </tr>
+        
+        <tr>
+          <td>configPath</td>
+          <td>config.yaml</td>
+        </tr>
+        
+        <tr>
+          <td>disable_ui</td>
+          <td>false</td>
+        </tr>
+        
+        <tr>
+          <td>httpPort</td>
+          <td>8080</td>
+        </tr>
+        
+        <tr>
+          <td>localStoragePath</td>
+          <td>~/cloudcommis-data/</td>
+        </tr>
+        
+        <tr>
+          <td>loglevel</td>
+          <td>debug</td>
+        </tr>
+        
+        <tr>
+          <td>s3BucketName</td>
+          <td></td>
+        </tr>
+        
+        <tr>
+          <td>s3BucketPath</td>
+          <td></td>
+        </tr>
+        
+        <tr>
+          <td>scanAws</td>
+          <td>true</td>
+        </tr>
+        
+        <tr>
+          <td>scanIntervalMin</td>
+          <td>1</td>
+        </tr>
+        
+        <tr>
+          <td>storage</td>
+          <td>local</td>
+        </tr>
+        
+    </tbody>
+</table>
