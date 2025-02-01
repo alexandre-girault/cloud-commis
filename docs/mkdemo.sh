@@ -44,7 +44,7 @@ do
         <td>
           <div class=\"form-check\">
           <input class=\"form-check-input\" type=\"radio\" name=\"flexRadio\" id=\"flexRadioDefault${ID}\"
-           hx-get=\"/vmdetails-${ARCH}\"
+           hx-get=\"/cloud-commis/vmdetails-${ARCH}\"
            hx-trigger=\"click\" hx-target=\"#vmdetails\" hx-swap=\"innerHTML\">
          </div>
        </td>
@@ -60,21 +60,20 @@ do
 done
 
 
-# static  vmdetails-arm_64 html
-echo '</tbody>
+
+echo "</tbody>
 </table>
 </div>
 <script>
-$('#vmlist-table').DataTable();
+\$('#vmlist-table').DataTable();
 </script>
+<div id=vmdetails class=\"border border-secondary text-bg-light d-flex dropdown\" >
+</div>" >> vmlist
 
-<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
-</div>' >> vmlist
 
-
-echo '
-<div class="container p-2 d-flex justify-content-center">
-  <div class="row overflow-auto gy-5">
+# static  vmdetails-arm_64 html
+echo '<div class="container p-2 d-flex justify-content-center">
+<div class="row overflow-auto gy-5">
 
     <div class="col"> 
 Instance details :
