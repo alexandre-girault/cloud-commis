@@ -14,106 +14,2602 @@
   </tr>
 </thead>
 <tbody>
-  
-       
-      
-       
-      
-       
-      
-       
-      
-       
-      
-       
-      
-       
-      
-       
-      
-       
-      
-       
-      
-       
-      
-       
-      
-       
-      
-       
-      
-      <tr>
+<tr>
         <td>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-08cb2bdddc801f6d8"
-            hx-get="/vmdetails/767410294669/eu-west-3/i-08cb2bdddc801f6d8" 
-            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-          </div>
-        </td>
-        <td>eu-west-3</td>
-        <td>767410294669</td>
-        <td>i-08cb2bdddc801f6d8</td>
-	      <td>test</td>
-	      <td>arm64</td>
-	      <td>Linux/UNIX</td>  
-	      <td>t4g.nano</td>
-	      <td>stopped</td>
-      </tr>
-      
-      <tr>
-        <td>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51defe2"
-            hx-get="/vmdetails/767410294669/eu-west-3/i-0d2941b87e51defe2" 
-            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-          </div>
-        </td>
-        <td>eu-west-3</td>
-        <td>767410294669</td>
-        <td>i-0d2941b87e51defe2</td>
-	      <td>test2</td>
-	      <td>x86_64</td>
-	      <td>Linux/UNIX</td>  
-	      <td>t2.micro</td>
-	      <td>stopped</td>
-      </tr>
-      
-       
-      
-       
-      
-       
-      
-      <tr>
-        <td>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-038548abed084b347"
-            hx-get="/vmdetails/767410294669/us-east-2/i-038548abed084b347" 
-            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-          </div>
-        </td>
-        <td>us-east-2</td>
-        <td>767410294669</td>
-        <td>i-038548abed084b347</td>
-	      <td>testOhio</td>
-	      <td>x86_64</td>
-	      <td>Red Hat Enterprise Linux</td>  
-	      <td>t2.micro</td>
-	      <td>stopped</td>
-      </tr>
-      
-       
-      
-       
-      
-    
-  
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def001"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def001"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def001</td>
+	   <td>nginx-001</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
 </tbody>
 </table>
 </div>
 <script>
-$('#vmlist-table').DataTable();
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def002"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def002"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def002</td>
+	   <td>worker-002</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def003"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def003"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def003</td>
+	   <td>front-003</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def004"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def004"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def004</td>
+	   <td>service-004</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def005"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def005"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def005</td>
+	   <td>redis-005</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def006"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def006"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def006</td>
+	   <td>front-006</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def007"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def007"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def007</td>
+	   <td>front-007</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def008"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def008"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def008</td>
+	   <td>redis-008</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def009"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def009"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def009</td>
+	   <td>front-009</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def010"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def010"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def010</td>
+	   <td>worker-010</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def011"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def011"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def011</td>
+	   <td>webapp-011</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def012"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def012"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def012</td>
+	   <td>front-012</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def013"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def013"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def013</td>
+	   <td>db-013</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def014"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def014"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def014</td>
+	   <td>redis-014</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def015"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def015"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def015</td>
+	   <td>redis-015</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def016"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def016"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def016</td>
+	   <td>db-016</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def017"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def017"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def017</td>
+	   <td>db-017</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def018"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def018"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def018</td>
+	   <td>db-018</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def019"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def019"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def019</td>
+	   <td>service-019</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def020"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def020"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def020</td>
+	   <td>front-020</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def021"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def021"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def021</td>
+	   <td>service-021</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def022"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def022"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def022</td>
+	   <td>proxy-022</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def023"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def023"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def023</td>
+	   <td>front-023</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def024"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def024"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def024</td>
+	   <td>db-024</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def025"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def025"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def025</td>
+	   <td>front-025</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def026"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def026"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def026</td>
+	   <td>db-026</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def027"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def027"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def027</td>
+	   <td>db-027</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def028"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def028"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def028</td>
+	   <td>worker-028</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def029"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def029"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def029</td>
+	   <td>front-029</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def030"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def030"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def030</td>
+	   <td>proxy-030</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def031"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def031"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def031</td>
+	   <td>front-031</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def032"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def032"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def032</td>
+	   <td>front-032</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def033"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def033"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def033</td>
+	   <td>proxy-033</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def034"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def034"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def034</td>
+	   <td>worker-034</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def035"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def035"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def035</td>
+	   <td>redis-035</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def036"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def036"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def036</td>
+	   <td>worker-036</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def037"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def037"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def037</td>
+	   <td>front-037</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def038"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def038"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def038</td>
+	   <td>webapp-038</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def039"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def039"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def039</td>
+	   <td>front-039</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def040"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def040"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def040</td>
+	   <td>webapp-040</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def041"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def041"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def041</td>
+	   <td>nginx-041</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def042"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def042"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def042</td>
+	   <td>redis-042</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def043"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def043"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def043</td>
+	   <td>worker-043</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def044"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def044"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def044</td>
+	   <td>redis-044</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def045"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def045"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def045</td>
+	   <td>db-045</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def046"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def046"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def046</td>
+	   <td>db-046</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def047"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def047"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def047</td>
+	   <td>front-047</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def048"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def048"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def048</td>
+	   <td>front-048</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def049"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def049"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def049</td>
+	   <td>webapp-049</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def050"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def050"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def050</td>
+	   <td>redis-050</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def051"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def051"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def051</td>
+	   <td>service-051</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def052"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def052"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def052</td>
+	   <td>front-052</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def053"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def053"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def053</td>
+	   <td>front-053</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def054"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def054"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def054</td>
+	   <td>front-054</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def055"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def055"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def055</td>
+	   <td>front-055</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def056"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def056"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def056</td>
+	   <td>worker-056</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def057"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def057"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def057</td>
+	   <td>front-057</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def058"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def058"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def058</td>
+	   <td>webapp-058</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def059"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def059"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def059</td>
+	   <td>proxy-059</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def060"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def060"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def060</td>
+	   <td>db-060</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def061"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def061"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def061</td>
+	   <td>db-061</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def062"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def062"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def062</td>
+	   <td>front-062</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def063"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def063"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def063</td>
+	   <td>redis-063</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def064"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def064"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def064</td>
+	   <td>worker-064</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def065"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def065"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def065</td>
+	   <td>front-065</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def066"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def066"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def066</td>
+	   <td>worker-066</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def067"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def067"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def067</td>
+	   <td>nginx-067</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def068"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def068"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def068</td>
+	   <td>front-068</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def069"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def069"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def069</td>
+	   <td>webapp-069</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def070"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def070"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def070</td>
+	   <td>redis-070</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def071"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def071"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def071</td>
+	   <td>db-071</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def072"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def072"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def072</td>
+	   <td>db-072</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def073"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def073"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def073</td>
+	   <td>front-073</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def074"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def074"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def074</td>
+	   <td>webapp-074</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def075"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def075"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def075</td>
+	   <td>worker-075</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def076"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def076"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def076</td>
+	   <td>worker-076</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def077"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def077"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def077</td>
+	   <td>service-077</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def078"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def078"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def078</td>
+	   <td>worker-078</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def079"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def079"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def079</td>
+	   <td>db-079</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def080"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def080"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def080</td>
+	   <td>service-080</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def081"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def081"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def081</td>
+	   <td>webapp-081</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def082"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def082"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def082</td>
+	   <td>db-082</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def083"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def083"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def083</td>
+	   <td>front-083</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def084"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def084"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def084</td>
+	   <td>front-084</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def085"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def085"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def085</td>
+	   <td>nginx-085</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def086"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def086"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def086</td>
+	   <td>proxy-086</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def087"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def087"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def087</td>
+	   <td>nginx-087</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def088"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def088"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def088</td>
+	   <td>worker-088</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def089"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def089"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def089</td>
+	   <td>front-089</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def090"
+           hx-get="/vmdetails/012345678910/us-east-2/i-0d2941b87e51def090"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def090</td>
+	   <td>redis-090</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def091"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def091"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def091</td>
+	   <td>db-091</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def092"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def092"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def092</td>
+	   <td>redis-092</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def093"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def093"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def093</td>
+	   <td>db-093</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def094"
+           hx-get="/vmdetails/012345678911/eu-north-1/i-0d2941b87e51def094"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def094</td>
+	   <td>proxy-094</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def095"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def095"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def095</td>
+	   <td>front-095</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def096"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def096"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def096</td>
+	   <td>front-096</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def097"
+           hx-get="/vmdetails/012345678910/eu-north-1/i-0d2941b87e51def097"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def097</td>
+	   <td>proxy-097</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def098"
+           hx-get="/vmdetails/012345678911/eu-west-1/i-0d2941b87e51def098"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def098</td>
+	   <td>db-098</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def099"
+           hx-get="/vmdetails/012345678911/us-east-2/i-0d2941b87e51def099"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def099</td>
+	   <td>db-099</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
+</script>
+
+<div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def100"
+           hx-get="/vmdetails/012345678910/eu-west-1/i-0d2941b87e51def100"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def100</td>
+	   <td>db-100</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+</tbody>
+</table>
+</div>
+<script>
+$(#vmlist-table).DataTable();
 </script>
 
 <div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
