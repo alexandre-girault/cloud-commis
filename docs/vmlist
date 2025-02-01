@@ -23,9 +23,9 @@
          </div>
        </td>
        <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def001</td>
-	   <td>redis-001</td>
+	   <td>db-001</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t4g.nano</td>
@@ -35,34 +35,34 @@
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def002"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678911</td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def002</td>
-	   <td>redis-002</td>
-	   <td>x86_64</td>
+	   <td>front-002</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>t4g.nano</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def003"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def003</td>
-	   <td>nginx-003</td>
-	   <td>x86_64</td>
+	   <td>worker-003</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>t4g.nano</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -73,10 +73,10 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678911</td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def004</td>
-	   <td>worker-004</td>
+	   <td>db-004</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>c5a.large</td>
@@ -90,31 +90,31 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
+       <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def005</td>
-	   <td>db-005</td>
+	   <td>worker-005</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>c5a.large</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def006"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def006</td>
-	   <td>db-006</td>
-	   <td>x86_64</td>
+	   <td>front-006</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>stopped</td>
+	   <td>t4g.nano</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
@@ -124,14 +124,14 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def007</td>
-	   <td>proxy-007</td>
+	   <td>front-007</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
@@ -142,9 +142,9 @@
          </div>
        </td>
        <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def008</td>
-	   <td>webapp-008</td>
+	   <td>worker-008</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>m6g.xlarge</td>
@@ -158,47 +158,47 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def009</td>
-	   <td>front-009</td>
+	   <td>service-009</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t4g.nano</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def010"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def010</td>
-	   <td>redis-010</td>
-	   <td>x86_64</td>
+	   <td>db-010</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>stopped</td>
+	   <td>t4g.nano</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def011"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def011</td>
 	   <td>front-011</td>
-	   <td>x86_64</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -210,13 +210,13 @@
          </div>
        </td>
        <td>eu-west-1</td>
-       <td>012345678911</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def012</td>
-	   <td>front-012</td>
+	   <td>db-012</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>stopped</td>
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
@@ -226,10 +226,10 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
+       <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def013</td>
-	   <td>nginx-013</td>
+	   <td>proxy-013</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>m6g.xlarge</td>
@@ -243,10 +243,10 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def014</td>
-	   <td>front-014</td>
+	   <td>nginx-014</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>c5a.large</td>
@@ -256,17 +256,17 @@
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def015"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def015</td>
-	   <td>front-015</td>
-	   <td>arm_64</td>
+	   <td>db-015</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>c5a.large</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -277,10 +277,10 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def016</td>
-	   <td>proxy-016</td>
+	   <td>front-016</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t2.micro</td>
@@ -294,10 +294,10 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
+       <td>eu-north-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def017</td>
-	   <td>worker-017</td>
+	   <td>redis-017</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t2.micro</td>
@@ -311,14 +311,14 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def018</td>
-	   <td>nginx-018</td>
+	   <td>redis-018</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>m6g.xlarge</td>
-	   <td>stopped</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
@@ -329,36 +329,36 @@
          </div>
        </td>
        <td>eu-north-1</td>
-       <td>012345678910</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def019</td>
-	   <td>db-019</td>
+	   <td>front-019</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
+	   <td>t2.micro</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def020"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
+       <td>us-east-2</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def020</td>
-	   <td>service-020</td>
-	   <td>arm_64</td>
+	   <td>db-020</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t2.micro</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def021"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
@@ -366,44 +366,44 @@
        <td>012345678911</td>
        <td>i-0d2941b87e51def021</td>
 	   <td>db-021</td>
-	   <td>arm_64</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t2.micro</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def022"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def022</td>
-	   <td>front-022</td>
-	   <td>x86_64</td>
+	   <td>db-022</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>t4g.nano</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def023"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def023</td>
-	   <td>proxy-023</td>
-	   <td>x86_64</td>
+	   <td>redis-023</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
@@ -414,13 +414,13 @@
          </div>
        </td>
        <td>us-east-2</td>
-       <td>012345678911</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def024</td>
-	   <td>db-024</td>
+	   <td>webapp-024</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
@@ -430,30 +430,30 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def025</td>
-	   <td>front-025</td>
+	   <td>db-025</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>t2.micro</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def026"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
+       <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def026</td>
-	   <td>front-026</td>
-	   <td>x86_64</td>
+	   <td>db-026</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>t4g.nano</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -465,12 +465,12 @@
          </div>
        </td>
        <td>us-east-2</td>
-       <td>012345678911</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def027</td>
-	   <td>db-027</td>
+	   <td>worker-027</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -481,10 +481,10 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
+       <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def028</td>
-	   <td>worker-028</td>
+	   <td>db-028</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t2.micro</td>
@@ -494,34 +494,34 @@
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def029"
-           hx-get="/vmdetails-x86_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def029</td>
-	   <td>service-029</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def030"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>us-east-2</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def030</td>
-	   <td>front-030</td>
-	   <td>x86_64</td>
+       <td>i-0d2941b87e51def029</td>
+	   <td>db-029</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def030"
+           hx-get="/vmdetails-arm_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def030</td>
+	   <td>nginx-030</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t4g.nano</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -532,47 +532,47 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
+       <td>us-east-2</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def031</td>
-	   <td>db-031</td>
+	   <td>redis-031</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t2.micro</td>
-	   <td>running</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def032"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def032</td>
-	   <td>worker-032</td>
-	   <td>x86_64</td>
+	   <td>front-032</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def033"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def033</td>
-	   <td>db-033</td>
-	   <td>x86_64</td>
+	   <td>nginx-033</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -583,7 +583,7 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
+       <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def034</td>
 	   <td>front-034</td>
@@ -600,13 +600,13 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def035</td>
-	   <td>front-035</td>
+	   <td>db-035</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>t2.micro</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -623,55 +623,21 @@
 	   <td>front-036</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>c5a.large</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def037"
-           hx-get="/vmdetails-x86_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>us-east-2</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def037</td>
-	   <td>redis-037</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def038"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>us-east-2</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def038</td>
-	   <td>webapp-038</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def039"
-           hx-get="/vmdetails-arm_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def039</td>
-	   <td>front-039</td>
+       <td>i-0d2941b87e51def037</td>
+	   <td>db-037</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t4g.nano</td>
@@ -680,70 +646,104 @@
 <tr>
         <td>
           <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def040"
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def038"
            hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>eu-west-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def040</td>
-	   <td>front-040</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def038</td>
+	   <td>webapp-038</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def039"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def039</td>
+	   <td>webapp-039</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def040"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def040</td>
+	   <td>proxy-040</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
 	   <td>stopped</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def041"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
+       <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def041</td>
-	   <td>worker-041</td>
-	   <td>arm_64</td>
+	   <td>nginx-041</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def042"
-           hx-get="/vmdetails-arm_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def042</td>
-	   <td>front-042</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>c5a.large</td>
 	   <td>stopped</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def043"
-           hx-get="/vmdetails-arm_64"
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def042"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>us-east-2</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def043</td>
-	   <td>db-043</td>
-	   <td>arm_64</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def042</td>
+	   <td>front-042</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>t2.micro</td>
 	   <td>running</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def043"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def043</td>
+	   <td>front-043</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
@@ -753,10 +753,10 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def044</td>
-	   <td>webapp-044</td>
+	   <td>nginx-044</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>m6g.xlarge</td>
@@ -770,8 +770,8 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678911</td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def045</td>
 	   <td>front-045</td>
 	   <td>x86_64</td>
@@ -783,35 +783,35 @@
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def046"
-           hx-get="/vmdetails-arm_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def046</td>
-	   <td>db-046</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def047"
            hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def046</td>
+	   <td>db-046</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>stopped</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def047"
+           hx-get="/vmdetails-arm_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def047</td>
 	   <td>front-047</td>
-	   <td>x86_64</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>stopped</td>
+	   <td>t4g.nano</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
@@ -824,10 +824,10 @@
        <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def048</td>
-	   <td>nginx-048</td>
+	   <td>front-048</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -838,82 +838,82 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def049</td>
-	   <td>front-049</td>
+	   <td>nginx-049</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t4g.nano</td>
 	   <td>stopped</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def050"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def050</td>
-	   <td>proxy-050</td>
-	   <td>x86_64</td>
+	   <td>worker-050</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>stopped</td>
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def051"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def051</td>
-	   <td>nginx-051</td>
-	   <td>arm_64</td>
+	   <td>front-051</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>c5a.large</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def052"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
+       <td>us-east-2</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def052</td>
-	   <td>db-052</td>
-	   <td>arm_64</td>
+	   <td>front-052</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>stopped</td>
+	   <td>c5a.large</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def053"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>eu-west-1</td>
-       <td>012345678910</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def053</td>
-	   <td>db-053</td>
-	   <td>arm_64</td>
+	   <td>nginx-053</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>stopped</td>
+	   <td>t2.micro</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
@@ -923,47 +923,47 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def054</td>
-	   <td>redis-054</td>
+	   <td>front-054</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def055"
-           hx-get="/vmdetails-x86_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def055</td>
-	   <td>webapp-055</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def056"
            hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>us-east-2</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def056</td>
-	   <td>webapp-056</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def055</td>
+	   <td>front-055</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def056"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def056</td>
+	   <td>proxy-056</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -974,61 +974,44 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
+       <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def057</td>
-	   <td>front-057</td>
+	   <td>db-057</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def058"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
+       <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def058</td>
-	   <td>db-058</td>
-	   <td>arm_64</td>
+	   <td>worker-058</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>c5a.large</td>
 	   <td>stopped</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def059"
-           hx-get="/vmdetails-arm_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def059</td>
-	   <td>db-059</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def060"
            hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def060</td>
-	   <td>service-060</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def059</td>
+	   <td>front-059</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t2.micro</td>
@@ -1037,18 +1020,35 @@
 <tr>
         <td>
           <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def061"
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def060"
            hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>us-east-2</td>
        <td>012345678911</td>
-       <td>i-0d2941b87e51def061</td>
-	   <td>proxy-061</td>
+       <td>i-0d2941b87e51def060</td>
+	   <td>front-060</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t4g.nano</td>
+	   <td>running</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def061"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def061</td>
+	   <td>service-061</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -1059,31 +1059,31 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
+       <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def062</td>
-	   <td>front-062</td>
+	   <td>worker-062</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>c5a.large</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def063"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
+       <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def063</td>
-	   <td>front-063</td>
-	   <td>arm_64</td>
+	   <td>db-063</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
+	   <td>t2.micro</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
@@ -1093,14 +1093,14 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
+       <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def064</td>
-	   <td>webapp-064</td>
+	   <td>proxy-064</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
@@ -1110,31 +1110,31 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def065</td>
-	   <td>nginx-065</td>
+	   <td>db-065</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>m6g.xlarge</td>
 	   <td>stopped</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def066"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>eu-west-1</td>
-       <td>012345678910</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def066</td>
-	   <td>db-066</td>
-	   <td>arm_64</td>
+	   <td>service-066</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
+	   <td>t2.micro</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
@@ -1147,7 +1147,7 @@
        <td>us-east-2</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def067</td>
-	   <td>db-067</td>
+	   <td>front-067</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>m6g.xlarge</td>
@@ -1157,17 +1157,17 @@
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def068"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def068</td>
-	   <td>nginx-068</td>
-	   <td>arm_64</td>
+	   <td>db-068</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>t2.micro</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -1178,10 +1178,10 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def069</td>
-	   <td>db-069</td>
+	   <td>front-069</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>m6g.xlarge</td>
@@ -1196,29 +1196,29 @@
          </div>
        </td>
        <td>us-east-2</td>
-       <td>012345678911</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def070</td>
 	   <td>front-070</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t4g.nano</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def071"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
+       <td>us-east-2</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def071</td>
-	   <td>webapp-071</td>
-	   <td>x86_64</td>
+	   <td>worker-071</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>t4g.nano</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -1229,10 +1229,10 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def072</td>
-	   <td>redis-072</td>
+	   <td>front-072</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>c5a.large</td>
@@ -1242,34 +1242,34 @@
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def073"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def073</td>
-	   <td>front-073</td>
-	   <td>x86_64</td>
+	   <td>db-073</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def074"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
+       <td>eu-north-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def074</td>
-	   <td>db-074</td>
-	   <td>arm_64</td>
+	   <td>front-074</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t2.micro</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -1280,13 +1280,13 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def075</td>
-	   <td>front-075</td>
+	   <td>worker-075</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t4g.nano</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -1298,9 +1298,9 @@
          </div>
        </td>
        <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def076</td>
-	   <td>worker-076</td>
+	   <td>front-076</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>m6g.xlarge</td>
@@ -1314,47 +1314,47 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
-       <td>012345678911</td>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def077</td>
 	   <td>webapp-077</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>c5a.large</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def078"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def078</td>
 	   <td>front-078</td>
-	   <td>x86_64</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def079"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def079</td>
-	   <td>worker-079</td>
-	   <td>x86_64</td>
+	   <td>front-079</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>t4g.nano</td>
 	   <td>stopped</td>
        </tr>
 <tr>
@@ -1366,63 +1366,63 @@
          </div>
        </td>
        <td>us-east-2</td>
-       <td>012345678911</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def080</td>
-	   <td>nginx-080</td>
+	   <td>front-080</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>stopped</td>
+	   <td>t2.micro</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def081"
-           hx-get="/vmdetails-x86_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>us-east-2</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def081</td>
-	   <td>proxy-081</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def082"
-           hx-get="/vmdetails-x86_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def082</td>
-	   <td>webapp-082</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def083"
            hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>eu-west-1</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def083</td>
-	   <td>front-083</td>
+       <td>i-0d2941b87e51def081</td>
+	   <td>db-081</td>
+	   <td>arm_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def082"
+           hx-get="/vmdetails-arm_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def082</td>
+	   <td>front-082</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t4g.nano</td>
+	   <td>stopped</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def083"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def083</td>
+	   <td>worker-083</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -1433,30 +1433,30 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def084</td>
-	   <td>worker-084</td>
+	   <td>redis-084</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t4g.nano</td>
 	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def085"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
+       <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def085</td>
-	   <td>service-085</td>
-	   <td>x86_64</td>
+	   <td>webapp-085</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -1467,30 +1467,30 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-west-1</td>
+       <td>eu-north-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def086</td>
-	   <td>db-086</td>
+	   <td>nginx-086</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>stopped</td>
+	   <td>t2.micro</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
           <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def087"
-           hx-get="/vmdetails-x86_64"
+           hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def087</td>
-	   <td>front-087</td>
-	   <td>x86_64</td>
+	   <td>service-087</td>
+	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -1501,14 +1501,14 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def088</td>
-	   <td>service-088</td>
+	   <td>db-088</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>stopped</td>
+	   <td>t2.micro</td>
+	   <td>running</td>
        </tr>
 <tr>
         <td>
@@ -1521,7 +1521,7 @@
        <td>eu-north-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def089</td>
-	   <td>db-089</td>
+	   <td>front-089</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>c5a.large</td>
@@ -1535,10 +1535,10 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def090</td>
-	   <td>webapp-090</td>
+	   <td>worker-090</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t2.micro</td>
@@ -1552,13 +1552,13 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
+       <td>us-east-2</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def091</td>
-	   <td>db-091</td>
+	   <td>webapp-091</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>c5a.large</td>
 	   <td>running</td>
        </tr>
 <tr>
@@ -1569,10 +1569,61 @@
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
+       <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def092</td>
-	   <td>nginx-092</td>
+	   <td>webapp-092</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def093"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def093</td>
+	   <td>proxy-093</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def094"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def094</td>
+	   <td>front-094</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def095"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def095</td>
+	   <td>db-095</td>
 	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t2.micro</td>
@@ -1581,15 +1632,15 @@
 <tr>
         <td>
           <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def093"
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def096"
            hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
        <td>us-east-2</td>
        <td>012345678911</td>
-       <td>i-0d2941b87e51def093</td>
-	   <td>front-093</td>
+       <td>i-0d2941b87e51def096</td>
+	   <td>worker-096</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>m6g.xlarge</td>
@@ -1598,15 +1649,49 @@
 <tr>
         <td>
           <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def094"
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def097"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def097</td>
+	   <td>front-097</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def098"
+           hx-get="/vmdetails-x86_64"
+           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
+         </div>
+       </td>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def098</td>
+	   <td>db-098</td>
+	   <td>x86_64</td>
+	   <td>Linux/UNIX</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+       </tr>
+<tr>
+        <td>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def099"
            hx-get="/vmdetails-arm_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
+       <td>eu-west-1</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def094</td>
-	   <td>front-094</td>
+       <td>i-0d2941b87e51def099</td>
+	   <td>service-099</td>
 	   <td>arm_64</td>
 	   <td>Linux/UNIX</td>  
 	   <td>t4g.nano</td>
@@ -1615,111 +1700,25 @@
 <tr>
         <td>
           <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def095"
-           hx-get="/vmdetails-arm_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def095</td>
-	   <td>db-095</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def096"
-           hx-get="/vmdetails-x86_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def096</td>
-	   <td>redis-096</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def097"
-           hx-get="/vmdetails-arm_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>us-east-2</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def097</td>
-	   <td>front-097</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def098"
-           hx-get="/vmdetails-arm_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def098</td>
-	   <td>nginx-098</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>stopped</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def099"
-           hx-get="/vmdetails-x86_64"
-           hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-         </div>
-       </td>
-       <td>us-east-2</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def099</td>
-	   <td>redis-099</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-       </tr>
-<tr>
-        <td>
-          <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefaulti-0d2941b87e51def100"
-           hx-get="/vmdetails-arm_64"
+           hx-get="/vmdetails-x86_64"
            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
          </div>
        </td>
-       <td>eu-north-1</td>
+       <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def100</td>
-	   <td>front-100</td>
-	   <td>arm_64</td>
+	   <td>db-100</td>
+	   <td>x86_64</td>
 	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>t2.micro</td>
 	   <td>running</td>
        </tr>
 </tbody>
 </table>
 </div>
 <script>
-$(#vmlist-table).DataTable();
+$('#vmlist-table').DataTable();
 </script>
-
 <div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
 </div>
