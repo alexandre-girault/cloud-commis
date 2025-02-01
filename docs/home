@@ -71,7 +71,7 @@
 
           "m6g.xlarge",
 
-          "c5a.large"
+          "c5a.large",
         
         ];
         var yacccount = [
