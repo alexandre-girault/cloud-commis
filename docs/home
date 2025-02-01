@@ -16,14 +16,18 @@
           "eu-west-3",
         
           "us-east-2",
+
+          "eu-north-1",
         
         ];
     
         var yValues = [
         
-          2,
+          25,
         
-          1,
+          15,
+
+          60,
         
         ];
     
@@ -64,13 +68,19 @@
           "t2.micro",
         
           "t4g.nano",
+
+          "m6g.xlarge",
+
+          "c5a.large"
         
         ];
         var yacccount = [
         
-          2,
+          25,
         
-          1,
+          10,
+
+          65,
         
         ];
         var barColors = ["red", "green","blue","orange","brown"];
@@ -108,12 +118,16 @@
         <script>
         var xaccounts = [
         
-          "767410294669",
+          "012345678910",
+
+          "012345678911",
         
         ];
         var yacccount = [
         
-          3,
+          80,
+
+          20,
         
         ];
         var barColors = ["red", "green","blue","orange","brown"];
