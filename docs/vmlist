@@ -1718,7 +1718,7 @@
 </table>
 </div>
 <script>
-$(#vmlist-table).DataTable();
+$('#vmlist-table').DataTable();
 </script>
 
 <div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
