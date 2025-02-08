@@ -1,8 +1,7 @@
 <div class="container-fluid">
-<table class="table table-hover" id="vmlist-table">
+<table class="table table-hover" id="vmlist-table" style="font-size: 12px;">
 <thead>
   <tr>
-    <th></th>
     <th>Region</th>
     <th>AwsAccountId</th>
     <th>InstanceId</th>
@@ -10,7 +9,8 @@
 	  <th>Architecture</th>
 	  <th>PlatformDetails</th> 
 	  <th>InstanceType</th>
-	  <th>State</th>       
+	  <th>State</th>
+    <th>Details</th>   
   </tr>
 </thead>
 <tbody>
@@ -18,13 +18,6 @@
     {{ range $region, $data := .AwsRegions }}   
       {{range $instanceId, $data := .VirtualMachines }}
       <tr>
-        <td>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefault{{ $instanceId }}"
-            hx-get="/vmdetails/{{ $accountId }}/{{ $region }}/{{ $instanceId }}" 
-            hx-trigger="click" hx-target="#vmdetails" hx-swap="innerHTML">
-          </div>
-        </td>
         <td>{{$region}}</td>
         <td>{{$accountId}}</td>
         <td>{{$instanceId}}</td>
@@ -33,6 +26,13 @@
 	      <td>{{.PlatformDetails}}</td>  
 	      <td>{{.InstanceType}}</td>
 	      <td>{{.State}}</td>
+        <td>
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+            hx-get="/vmdetails/{{ $accountId }}/{{ $region }}/{{ $instanceId }}" 
+            hx-trigger="click" hx-target="#rightPanelDetails" hx-swap="innerHTML">
+            Details
+          </button>
+        </td>
       </tr>
       {{end}}
     {{end}}
@@ -45,4 +45,15 @@ $('#vmlist-table').DataTable();
 </script>
 
 <div id=vmdetails class="border border-secondary text-bg-light d-flex dropdown" >
+</div>
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" >
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">vm Details</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <pre class="bg-opacity-10 bg-warning " id="rightPanelDetails" style="white-space: pre-wrap;">
+    </pre>
+  </div>
 </div>
