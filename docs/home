@@ -5,7 +5,7 @@
     <!-- vm by region pie chart -->
     <div class="row">
       <div class="col-md border p-3">
-        Total VMs: <p class="text-center fw-bold fs-2">3</p>
+        Total VMs: <p class="text-center fw-bold fs-2">100</p>
       </div>
       <div class="col-md border p-3">
         <canvas id="regionChart"></canvas>
@@ -63,7 +63,7 @@
         <canvas id="instanceTypeChart" style="height: 400px; width: 400;"></canvas>
     
         <script>
-        var xaccounts = [
+        var xvmTypes = [
         
           "t2.micro",
         
@@ -74,15 +74,15 @@
           "c5a.large",
         
         ];
-        var yacccount = [
+        var yvmTypes = [
         
-          25,
+          20,
         
-          8,
+          20,
 
-          65,
+          50,
 
-          2,
+          10,
         
         ];
         var barColors = ["red", "green","blue","orange","brown"];
@@ -90,11 +90,11 @@
         new Chart("instanceTypeChart", {
           type: "bar",
           data: {
-            labels: xaccounts,
+            labels: xvmTypes,
             datasets: [{
               label: "VMs by type",
               backgroundColor: barColors,
-              data: yValues
+              data: yvmTypes
             }]
           },
           options: {

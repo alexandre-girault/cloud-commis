@@ -1,41 +1,23 @@
-<div class="container p-2 d-flex justify-content-center">
-<div class="row overflow-auto gy-5">
-
-    <div class="col"> 
-Instance details :
-    <pre class="p-3 col border bg-opacity-10 bg-warning" style="width:600px; height: 400px;">
 
 {
-  "Name": "test",
+  "Name": "demo values",
   "Architecture": "arm64",
   "LaunchTime": "2024-10-26T13:15:55Z",
   "UsageOperationUpdateTime": "2024-10-26T13:15:55Z",
   "PlatformDetails": "Linux/UNIX",
-  "ImageId": "ami-01c5300f289d64643",
-  "InstanceType": "t4g.nano",
+  "ImageId": "ami-01c5300f289d6XXXX",
+  "InstanceType": "xxx.someSize",
   "PublicIpAddress": "",
-  "State": "stopped",
+  "State": "running",
   "KernelImage": "Kernel 6.1.112-122.189.amzn2023.aarch64 on an aarch64 (-)\r",
   "BootImage": "Booting `Amazon Linux (6.1.112-122.189.amzn2023.aarch64) 2023"
 }
 
-    </pre>
-    </div>
-
-    <div class="col">
-Image details :
-    <pre class="p-3 col border bg-opacity-10 bg-warning"" style="width:600px; height: 400px;">
-
 {
   "Name": "al2023-ami-2023.6.20241010.0-kernel-6.1-arm64",
-  "Region": "eu-west-3",
+  "Region": "xx-west-3",
   "Description": "Amazon Linux 2023 AMI 2023.6.20241010.0 arm64 HVM kernel-6.1",
   "OwnerId": "137112412989",
   "DeprecationTime": "2025-01-09T16:54:00.000Z"
 }
 
-    </pre>
-    </div>
-
-  </div>
-</div>

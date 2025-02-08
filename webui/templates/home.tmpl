@@ -55,12 +55,12 @@
         <canvas id="instanceTypeChart" style="height: 400px; width: 400;"></canvas>
     
         <script>
-        var xaccounts = [
+        var xvmTypes = [
         {{ range $instanceType, $sum := .SumVmByType }}
           "{{ $instanceType }}",
         {{ end }}
         ];
-        var yacccount = [
+        var yvmTypes = [
         {{ range $instanceType, $sum := .SumVmByType }}
           {{ $sum }},
         {{ end }}
@@ -70,11 +70,11 @@
         new Chart("instanceTypeChart", {
           type: "bar",
           data: {
-            labels: xaccounts,
+            labels: xvmTypes,
             datasets: [{
               label: "VMs by type",
               backgroundColor: barColors,
-              data: yValues
+              data: yvmTypes
             }]
           },
           options: {

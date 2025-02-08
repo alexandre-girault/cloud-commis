@@ -1,4 +1,4 @@
-<table class="table table-striped table-bordered" id="config-table">
+<table class="table table-striped table-bordered text-xsmall" id="config-table" style="font-size: 12px;">
     <thead>
       <tr>
         <th>Parameter</th>
