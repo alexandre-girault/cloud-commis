@@ -11,7 +11,7 @@
     <a href="https://github.com/alexandre-girault/cloud-commis"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/alexandre-girault/cloud-commis">View Demo</a>
+    <a href="https://alexandre-girault.github.io/cloud-commis/">View Demo</a>
     &middot;
     <a href="https://github.com/alexandre-girault/cloud-commis/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
