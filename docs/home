@@ -5,22 +5,30 @@
     <!-- vm by region pie chart -->
     <div class="row">
       <div class="col-md border p-3">
-        Total VMs: <p class="text-center fw-bold fs-2">{{ .TotalVMs }}</p>
+        Total VMs: <p class="text-center fw-bold fs-2">100</p>
       </div>
       <div class="col-md border p-3">
         <canvas id="regionChart"></canvas>
         <script>
     
         var xValues = [
-        {{ range $region, $vmsum := .SumVmByRegion }}
-          "{{ $region }}",
-        {{ end }}
+        
+          "eu-west-3",
+        
+          "us-east-2",
+
+          "eu-north-1",
+        
         ];
     
         var yValues = [
-        {{ range $region, $vmsum := .SumVmByRegion }}
-          {{ $vmsum }},
-        {{ end }}
+        
+          25,
+        
+          15,
+
+          60,
+        
         ];
     
         var barColors = [
@@ -56,14 +64,26 @@
     
         <script>
         var xvmTypes = [
-        {{ range $instanceType, $sum := .SumVmByType }}
-          "{{ $instanceType }}",
-        {{ end }}
+        
+          "t2.micro",
+        
+          "t4g.nano",
+
+          "m6g.xlarge",
+
+          "c5a.large",
+        
         ];
         var yvmTypes = [
-        {{ range $instanceType, $sum := .SumVmByType }}
-          {{ $sum }},
-        {{ end }}
+        
+          20,
+        
+          20,
+
+          50,
+
+          10,
+        
         ];
         var barColors = ["red", "green","blue","orange","brown"];
         
@@ -99,14 +119,18 @@
     
         <script>
         var xaccounts = [
-        {{ range $account, $sum := .SumVmByAccount }}
-          "{{ $account }}",
-        {{ end }}
+        
+          "012345678910",
+
+          "012345678911",
+        
         ];
         var yacccount = [
-        {{ range $account, $sum := .SumVmByAccount }}
-          {{ $sum }},
-        {{ end }}
+        
+          80,
+
+          20,
+        
         ];
         var barColors = ["red", "green","blue","orange","brown"];
         

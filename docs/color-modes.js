@@ -1,0 +1,1 @@
+../webui/statics/js/color-modes.js

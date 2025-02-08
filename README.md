@@ -11,7 +11,7 @@
     <a href="https://github.com/alexandre-girault/cloud-commis"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/alexandre-girault/cloud-commis">View Demo</a>
+    <a href="https://alexandre-girault.github.io/cloud-commis/">View Demo</a>
     &middot;
     <a href="https://github.com/alexandre-girault/cloud-commis/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
@@ -54,7 +54,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+Here's a blank template to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
