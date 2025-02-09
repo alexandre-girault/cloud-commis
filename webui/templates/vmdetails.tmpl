@@ -1,4 +1,24 @@
+<h5 >Instance Details</h5>
+<dl>
+  <dt class="col-sm-3">Name</dt>       <dd class="col-sm-9">{{ .VmDetails.Name }}</dd>
+  <dt class="col-sm-3">Type</dt>       <dd class="col-sm-9">{{ .VmDetails.InstanceType }}</dd>
+  <dt class="col-sm-3">State</dt>      <dd class="col-sm-9">{{ .VmDetails.State }}</dd>
+  <dt class="col-sm-3">Arch</dt>       <dd class="col-sm-9">{{ .VmDetails.Architecture }}</dd>
+  <dt class="col-sm-3">Os</dt>         <dd class="col-sm-9">{{ .VmDetails.PlatformDetails }}</dd>
+  <dt class="col-sm-3">LaunchTime</dt> <dd class="col-sm-9">{{ .VmDetails.LaunchTime }}</dd>
+  <dt class="col-sm-3">UpdateTime</dt> <dd class="col-sm-9">{{ .VmDetails.UsageOperationUpdateTime }}</dd>
+  <dt class="col-sm-3">PublicIp</dt>   <dd class="col-sm-9">{{ .VmDetails.PublicIpAddress }}</dd>
+  <dt class="col-sm-3">Kernel</dt>     <dd class="col-sm-9">{{ .VmDetails.KernelImage }}</dd>
+  <dt class="col-sm-3">BootImage</dt>  <dd class="col-sm-9">{{ .VmDetails.BootImage }}</dd>
+</dl>
 
-{{ .Vm}}
+<hr class="hr" />
 
-{{ .Ami}}
+<h5 >AMI Details</h5>
+<dl>
+  <dt class="col-sm-3">Name</dt>       <dd class="col-sm-9">{{ .AmiDetails.Name }}</dd>
+  <dt class="col-sm-3">Region</dt>       <dd class="col-sm-9">{{ .AmiDetails.Region }}</dd>
+  <dt class="col-sm-3">Description</dt>       <dd class="col-sm-9">{{ .AmiDetails.Description }}</dd>
+  <dt class="col-sm-3">OwnerId</dt>       <dd class="col-sm-9">{{ .AmiDetails.OwnerId }}</dd>
+  <dt class="col-sm-3">DeprecationTime</dt>       <dd class="col-sm-9">{{ .AmiDetails.DeprecationTime }}</dd>
+</dl>
