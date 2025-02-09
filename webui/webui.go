@@ -5,7 +5,6 @@ import (
 	"cloud-commis/logger"
 	"cloud-commis/storage"
 	"embed"
-	"encoding/json"
 	"io/fs"
 	"log"
 	"net/http"
@@ -51,8 +50,8 @@ func getVM(writer http.ResponseWriter, request *http.Request) {
 func getVMDetails(writer http.ResponseWriter, request *http.Request) {
 
 	type vmData struct {
-		Vm  string
-		Ami string
+		VmDetails  storage.VirtualMachine
+		AmiDetails storage.AwsImage
 	}
 
 	awsAccount, _ := strconv.Atoi(request.PathValue("awsaccount"))
@@ -61,33 +60,20 @@ func getVMDetails(writer http.ResponseWriter, request *http.Request) {
 
 	writer.WriteHeader(http.StatusOK)
 
-	jsonData, err := storage.Data.Read()
+	storedData, err := storage.Data.Read()
 	if err != nil {
 		logger.Log.Error("Read storage failure")
 	}
 
 	var data vmData
-	amiId := jsonData.AwsAccounts[awsAccount].AwsRegions[region].VirtualMachines[vmId].ImageId
-	vm := jsonData.AwsAccounts[awsAccount].AwsRegions[region].VirtualMachines[vmId]
-	ami := jsonData.AwsImages[amiId]
+	amiId := storedData.AwsAccounts[awsAccount].AwsRegions[region].VirtualMachines[vmId].ImageId
+	data.VmDetails = storedData.AwsAccounts[awsAccount].AwsRegions[region].VirtualMachines[vmId]
+	data.AmiDetails = storedData.AwsImages[amiId]
 
-	vmDataJSON, err := json.MarshalIndent(vm, "", "  ")
-	if err != nil {
-		logger.Log.Error("Cannot marshal vmData to JSON" + err.Error())
-		return
-	}
-
-	amiDataJSON, err := json.MarshalIndent(ami, "", "  ")
-	if err != nil {
-		logger.Log.Error("Cannot marshal vmData to JSON" + err.Error())
-		return
-	}
-
-	data.Vm = string(vmDataJSON)
-	data.Ami = string(amiDataJSON)
 	var templatesFS = fs.FS(templateFiles)
 
 	tmpl := template.Must(template.ParseFS(templatesFS, "templates/vmdetails.tmpl"))
+
 	tmplErr := tmpl.Execute(writer, data)
 	if tmplErr != nil {
 		logger.Log.Error("Cannot render template vmdetails.tmpl" + tmplErr.Error())
