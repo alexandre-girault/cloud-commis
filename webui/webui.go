@@ -86,6 +86,7 @@ func getHome(writer http.ResponseWriter, request *http.Request) {
 		TotalVMs       int
 		SumVmByRegion  map[string]int
 		SumVmByType    map[string]int
+		SumVmByOS      map[string]int
 		SumVmByAccount map[int]int
 	}
 
@@ -99,6 +100,7 @@ func getHome(writer http.ResponseWriter, request *http.Request) {
 	homeStats := stats{}
 	homeStats.SumVmByRegion = make(map[string]int)
 	homeStats.SumVmByType = make(map[string]int)
+	homeStats.SumVmByOS = make(map[string]int)
 	homeStats.SumVmByAccount = make(map[int]int)
 
 	for accountId, accountData := range jsonData.AwsAccounts {
@@ -110,6 +112,7 @@ func getHome(writer http.ResponseWriter, request *http.Request) {
 			}
 			for _, vmData := range regionData.VirtualMachines {
 				homeStats.SumVmByType[vmData.InstanceType] += 1
+				homeStats.SumVmByOS[vmData.BootImage] += 1
 				homeStats.SumVmByAccount[accountId] += 1
 			}
 		}
