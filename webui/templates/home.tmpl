@@ -8,7 +8,7 @@
         Total VMs: <p class="text-center fw-bold fs-2">{{ .TotalVMs }}</p>
       </div>
       <div class="col-md border p-3">
-        <canvas id="regionChart"></canvas>
+        <canvas id="regionChart" width="600" height="350"></canvas>
         <script>
     
         var xValues = [
@@ -41,6 +41,12 @@
             }]
           },
           options: {
+            plugins:{
+              legend: { 
+                position: "right",
+              }
+            },
+            responsive: false,
             title: {
               display: true,
               text: "servers per region"
@@ -49,10 +55,12 @@
         });
         </script>
       </div>
+    </div>
     
     <!-- vm by type bar chart -->
+    <div class="row">
       <div class="col-md border p-3" >
-        <canvas id="instanceTypeChart" style="height: 400px; width: 400;"></canvas>
+        <canvas id="instanceTypeChart" width="600" height="350"></canvas>
     
         <script>
         var xvmTypes = [
@@ -78,6 +86,7 @@
             }]
           },
           options: {
+            responsive: false,
             legend: {display: false},
             title: {
               display: true,
@@ -92,10 +101,63 @@
         });
         </script>
       </div>
-    
-    <!-- vm by Account bar chart -->
+
+    <!-- vm by OS pie chart -->
       <div class="col-md border p-3">
-        <canvas id="AccountChart" style="height: 400px; width: 400;"></canvas>
+        <canvas id="SumVmByOSChart" width="600" height="350"></canvas>
+        <script>
+    
+        var xOSValues = [
+        {{ range $os, $vmsum := .SumVmByOS }}
+          "{{ $os }}",
+        {{ end }}
+        ];
+    
+        var yOSValues = [
+        {{ range $os, $vmsum := .SumVmByOS }}
+          {{ $vmsum }},
+        {{ end }}
+        ];
+    
+        var barColors = [
+          "#b91d47",
+          "#00aba9",
+          "#2b5797",
+          "#e8c3b9",
+          "#1e7145"
+        ];
+    
+        new Chart("SumVmByOSChart", {
+          type: "pie",
+          data: {
+            labels: xOSValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yOSValues
+            }]
+          },
+          options: {
+            plugins:{
+              legend: { 
+                position: "right",
+              }
+            },
+            responsive: false,
+            title: {
+              align: "start",
+              display: true,
+              text: "servers by Operating System"
+            }
+          }
+        });
+        </script>
+      </div>
+    </div>
+
+    <!-- vm by Account bar chart -->
+    <div class="row">
+      <div class="col-md border p-3">
+        <canvas id="AccountChart" width="600" height="350"></canvas>
     
         <script>
         var xaccounts = [
@@ -121,6 +183,7 @@
             }]
           },
           options: {
+            responsive: false,
             legend: {display: false},
             title: {
               display: true,
@@ -136,6 +199,7 @@
         </script>
       </div>
     </div>
+
   </div>
 
 
