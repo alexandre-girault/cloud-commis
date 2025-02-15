@@ -5,6 +5,7 @@ REGIONS="eu-west-1 eu-north-1 us-east-2"
 ACCOUNTS="012345678910 012345678911"
 NAMES="front front front db db db redis service webapp nginx proxy worker"
 STATES="stopped running running running"
+OS_NAMES="Amazon_Linux_2023.6.20241010 Red_Hat_Enterprise_Linux_9.4 Ubuntu_22.04.5_LTS"
 TYPES="t2.micro t4g.nano m6g.xlarge c5a.large"
 
 # static random vmlist html
@@ -17,7 +18,7 @@ echo '<div class="container-fluid">
     <th>InstanceId</th>
 	  <th>Name</th>
 	  <th>Architecture</th>
-	  <th>PlatformDetails</th> 
+	  <th>OS</th> 
 	  <th>InstanceType</th>
 	  <th>State</th>
     <th>Details</th>   
@@ -30,6 +31,7 @@ do
     ACCOUNT=$(shuf -e -n1 ${ACCOUNTS})
     REGION=$(shuf -e -n1 ${REGIONS})
     TYPE=$(shuf -e -n1 ${TYPES})
+    OS_NAME=$(shuf -e -n1 ${OS_NAMES}| tr '_' ' ')
     NAME="$(shuf -e -n1 ${NAMES})-${num}"
     ID="i-0d2941b87e51def${num}"
     STATE=$(shuf -e -n1 ${STATES})
@@ -46,7 +48,7 @@ do
        <td>${ID}</td>
 	   <td>${NAME}</td>
 	   <td>${ARCH}</td>
-	   <td>Linux/UNIX</td>  
+	   <td>${OS_NAME}</td>  
 	   <td>${TYPE}</td>
 	   <td>${STATE}</td>
      <td>

@@ -7,7 +7,7 @@
     <th>InstanceId</th>
 	  <th>Name</th>
 	  <th>Architecture</th>
-	  <th>PlatformDetails</th> 
+	  <th>OS</th> 
 	  <th>InstanceType</th>
 	  <th>State</th>
     <th>Details</th>   
@@ -15,31 +15,14 @@
 </thead>
 <tbody>
 <tr>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def001</td>
-	   <td>service-001</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>worker-001</td>
+	   <td>x86_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t2.micro</td>
 	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def002</td>
-	   <td>front-002</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -51,12 +34,29 @@
 <tr>
        <td>eu-north-1</td>
        <td>012345678911</td>
+       <td>i-0d2941b87e51def002</td>
+	   <td>db-002</td>
+	   <td>arm_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def003</td>
-	   <td>service-003</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>stopped</td>
+	   <td>db-003</td>
+	   <td>arm_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -69,10 +69,10 @@
        <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def004</td>
-	   <td>db-004</td>
+	   <td>front-004</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -86,11 +86,11 @@
        <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def005</td>
-	   <td>db-005</td>
+	   <td>front-005</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>c5a.large</td>
-	   <td>stopped</td>
+	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -100,14 +100,14 @@
      </td>
        </tr>
 <tr>
-       <td>us-east-2</td>
-       <td>012345678911</td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def006</td>
-	   <td>front-006</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
+	   <td>webapp-006</td>
+	   <td>arm_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -120,27 +120,10 @@
        <td>us-east-2</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def007</td>
-	   <td>front-007</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>us-east-2</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def008</td>
-	   <td>nginx-008</td>
+	   <td>db-007</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t4g.nano</td>
 	   <td>stopped</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -152,12 +135,29 @@
        </tr>
 <tr>
        <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def008</td>
+	   <td>db-008</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def009</td>
-	   <td>redis-009</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>proxy-009</td>
+	   <td>x86_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -168,63 +168,12 @@
      </td>
        </tr>
 <tr>
-       <td>eu-north-1</td>
+       <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def010</td>
-	   <td>proxy-010</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>us-east-2</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def011</td>
-	   <td>worker-011</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def012</td>
-	   <td>front-012</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>us-east-2</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def013</td>
-	   <td>nginx-013</td>
+	   <td>worker-010</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
@@ -237,13 +186,47 @@
        </tr>
 <tr>
        <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def014</td>
-	   <td>front-014</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def011</td>
+	   <td>webapp-011</td>
+	   <td>arm_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def012</td>
+	   <td>worker-012</td>
+	   <td>x86_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def013</td>
+	   <td>webapp-013</td>
+	   <td>arm_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -255,11 +238,28 @@
 <tr>
        <td>eu-north-1</td>
        <td>012345678911</td>
+       <td>i-0d2941b87e51def014</td>
+	   <td>db-014</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def015</td>
-	   <td>worker-015</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>redis-015</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -273,9 +273,9 @@
        <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def016</td>
-	   <td>nginx-016</td>
+	   <td>db-016</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
@@ -290,11 +290,11 @@
        <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def017</td>
-	   <td>redis-017</td>
+	   <td>service-017</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>m6g.xlarge</td>
-	   <td>stopped</td>
+	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -304,63 +304,12 @@
      </td>
        </tr>
 <tr>
-       <td>eu-west-1</td>
+       <td>us-east-2</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def018</td>
-	   <td>front-018</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def019</td>
-	   <td>nginx-019</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def020</td>
-	   <td>front-020</td>
+	   <td>proxy-018</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def021</td>
-	   <td>webapp-021</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
@@ -374,12 +323,63 @@
 <tr>
        <td>eu-north-1</td>
        <td>012345678911</td>
-       <td>i-0d2941b87e51def022</td>
-	   <td>worker-022</td>
+       <td>i-0d2941b87e51def019</td>
+	   <td>worker-019</td>
+	   <td>arm_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def020</td>
+	   <td>db-020</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t2.micro</td>
 	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def021</td>
+	   <td>nginx-021</td>
+	   <td>x86_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def022</td>
+	   <td>db-022</td>
+	   <td>x86_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -393,25 +393,8 @@
        <td>012345678911</td>
        <td>i-0d2941b87e51def023</td>
 	   <td>db-023</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def024</td>
-	   <td>front-024</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>t2.micro</td>
 	   <td>running</td>
      <td>
@@ -423,12 +406,46 @@
      </td>
        </tr>
 <tr>
-       <td>us-east-2</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def024</td>
+	   <td>front-024</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def025</td>
-	   <td>nginx-025</td>
+	   <td>service-025</td>
+	   <td>arm_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def026</td>
+	   <td>proxy-026</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
@@ -442,28 +459,11 @@
 <tr>
        <td>eu-west-1</td>
        <td>012345678911</td>
-       <td>i-0d2941b87e51def026</td>
-	   <td>db-026</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
        <td>i-0d2941b87e51def027</td>
-	   <td>nginx-027</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>front-027</td>
+	   <td>x86_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -477,60 +477,9 @@
        <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def028</td>
-	   <td>redis-028</td>
+	   <td>db-028</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>us-east-2</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def029</td>
-	   <td>redis-029</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def030</td>
-	   <td>nginx-030</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def031</td>
-	   <td>worker-031</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
@@ -542,13 +491,30 @@
      </td>
        </tr>
 <tr>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def032</td>
-	   <td>nginx-032</td>
+       <td>i-0d2941b87e51def029</td>
+	   <td>front-029</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>m6g.xlarge</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def030</td>
+	   <td>webapp-030</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>t2.micro</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -561,11 +527,45 @@
 <tr>
        <td>eu-west-1</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def033</td>
-	   <td>worker-033</td>
+       <td>i-0d2941b87e51def031</td>
+	   <td>db-031</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def032</td>
+	   <td>db-032</td>
+	   <td>arm_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def033</td>
+	   <td>db-033</td>
+	   <td>arm_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -581,9 +581,9 @@
        <td>i-0d2941b87e51def034</td>
 	   <td>front-034</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -593,13 +593,13 @@
      </td>
        </tr>
 <tr>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def035</td>
-	   <td>redis-035</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>worker-035</td>
+	   <td>arm_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -613,11 +613,11 @@
        <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def036</td>
-	   <td>nginx-036</td>
+	   <td>front-036</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>stopped</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -627,12 +627,46 @@
      </td>
        </tr>
 <tr>
-       <td>us-east-2</td>
+       <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def037</td>
-	   <td>service-037</td>
+	   <td>front-037</td>
+	   <td>x86_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def038</td>
+	   <td>worker-038</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def039</td>
+	   <td>worker-039</td>
+	   <td>arm_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>t4g.nano</td>
 	   <td>stopped</td>
      <td>
@@ -646,46 +680,12 @@
 <tr>
        <td>eu-west-1</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def038</td>
-	   <td>service-038</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def039</td>
-	   <td>db-039</td>
+       <td>i-0d2941b87e51def040</td>
+	   <td>db-040</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>t2.micro</td>
 	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def040</td>
-	   <td>worker-040</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>stopped</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -699,9 +699,9 @@
        <td>012345678911</td>
        <td>i-0d2941b87e51def041</td>
 	   <td>db-041</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -712,12 +712,12 @@
      </td>
        </tr>
 <tr>
-       <td>eu-north-1</td>
+       <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def042</td>
-	   <td>db-042</td>
+	   <td>proxy-042</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Amazon Linux 2023.6.20241010</td>  
 	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
@@ -730,130 +730,11 @@
        </tr>
 <tr>
        <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def043</td>
-	   <td>redis-043</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def044</td>
-	   <td>front-044</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def045</td>
-	   <td>front-045</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def046</td>
-	   <td>redis-046</td>
+	   <td>db-043</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def047</td>
-	   <td>nginx-047</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def048</td>
-	   <td>worker-048</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>us-east-2</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def049</td>
-	   <td>db-049</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def050</td>
-	   <td>front-050</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
@@ -867,10 +748,78 @@
 <tr>
        <td>eu-north-1</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def051</td>
-	   <td>webapp-051</td>
+       <td>i-0d2941b87e51def044</td>
+	   <td>webapp-044</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def045</td>
+	   <td>front-045</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def046</td>
+	   <td>proxy-046</td>
+	   <td>x86_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def047</td>
+	   <td>redis-047</td>
+	   <td>x86_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def048</td>
+	   <td>db-048</td>
+	   <td>x86_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>t2.micro</td>
 	   <td>stopped</td>
      <td>
@@ -882,13 +831,30 @@
      </td>
        </tr>
 <tr>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def052</td>
-	   <td>db-052</td>
+       <td>i-0d2941b87e51def049</td>
+	   <td>nginx-049</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>m6g.xlarge</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def050</td>
+	   <td>worker-050</td>
+	   <td>arm_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -901,11 +867,45 @@
 <tr>
        <td>us-east-2</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def053</td>
-	   <td>webapp-053</td>
+       <td>i-0d2941b87e51def051</td>
+	   <td>front-051</td>
+	   <td>arm_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def052</td>
+	   <td>webapp-052</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>t2.micro</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def053</td>
+	   <td>front-053</td>
+	   <td>arm_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -919,10 +919,10 @@
        <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def054</td>
-	   <td>db-054</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>redis-054</td>
+	   <td>arm_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -936,60 +936,9 @@
        <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def055</td>
-	   <td>redis-055</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def056</td>
-	   <td>nginx-056</td>
+	   <td>worker-055</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def057</td>
-	   <td>db-057</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def058</td>
-	   <td>worker-058</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
@@ -1001,13 +950,64 @@
      </td>
        </tr>
 <tr>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678911</td>
+       <td>i-0d2941b87e51def056</td>
+	   <td>db-056</td>
+	   <td>x86_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t2.micro</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def057</td>
+	   <td>db-057</td>
+	   <td>x86_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>c5a.large</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def058</td>
+	   <td>service-058</td>
+	   <td>arm_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def059</td>
 	   <td>front-059</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>x86_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1021,27 +1021,10 @@
        <td>us-east-2</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def060</td>
-	   <td>front-060</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def061</td>
-	   <td>proxy-061</td>
+	   <td>worker-060</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1053,12 +1036,29 @@
        </tr>
 <tr>
        <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def061</td>
+	   <td>webapp-061</td>
+	   <td>x86_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t2.micro</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def062</td>
-	   <td>redis-062</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>front-062</td>
+	   <td>x86_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1069,13 +1069,13 @@
      </td>
        </tr>
 <tr>
-       <td>us-east-2</td>
+       <td>eu-north-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def063</td>
-	   <td>db-063</td>
+	   <td>redis-063</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1087,12 +1087,12 @@
        </tr>
 <tr>
        <td>eu-north-1</td>
-       <td>012345678910</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def064</td>
-	   <td>front-064</td>
+	   <td>db-064</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1103,12 +1103,29 @@
      </td>
        </tr>
 <tr>
-       <td>eu-north-1</td>
+       <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def065</td>
-	   <td>front-065</td>
+	   <td>webapp-065</td>
+	   <td>x86_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def066</td>
+	   <td>db-066</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
@@ -1120,12 +1137,12 @@
      </td>
        </tr>
 <tr>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def066</td>
-	   <td>front-066</td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def067</td>
+	   <td>service-067</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>t2.micro</td>
 	   <td>running</td>
      <td>
@@ -1138,64 +1155,13 @@
        </tr>
 <tr>
        <td>eu-north-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def067</td>
-	   <td>worker-067</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def068</td>
-	   <td>db-068</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>us-east-2</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def069</td>
-	   <td>webapp-069</td>
+	   <td>worker-068</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Amazon Linux 2023.6.20241010</td>  
 	   <td>m6g.xlarge</td>
-	   <td>stopped</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def070</td>
-	   <td>service-070</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>stopped</td>
+	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -1207,10 +1173,10 @@
 <tr>
        <td>eu-west-1</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def071</td>
-	   <td>redis-071</td>
+       <td>i-0d2941b87e51def069</td>
+	   <td>front-069</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
@@ -1223,12 +1189,46 @@
        </tr>
 <tr>
        <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def070</td>
+	   <td>db-070</td>
+	   <td>x86_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def071</td>
+	   <td>db-071</td>
+	   <td>x86_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t2.micro</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def072</td>
 	   <td>service-072</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>arm_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1242,26 +1242,9 @@
        <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def073</td>
-	   <td>db-073</td>
+	   <td>nginx-073</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>us-east-2</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def074</td>
-	   <td>nginx-074</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
@@ -1275,10 +1258,10 @@
 <tr>
        <td>eu-west-1</td>
        <td>012345678911</td>
-       <td>i-0d2941b87e51def075</td>
-	   <td>db-075</td>
+       <td>i-0d2941b87e51def074</td>
+	   <td>redis-074</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Amazon Linux 2023.6.20241010</td>  
 	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
@@ -1291,30 +1274,13 @@
        </tr>
 <tr>
        <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def076</td>
-	   <td>db-076</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def077</td>
-	   <td>front-077</td>
+       <td>i-0d2941b87e51def075</td>
+	   <td>front-075</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t2.micro</td>
+	   <td>stopped</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -1325,11 +1291,11 @@
        </tr>
 <tr>
        <td>us-east-2</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def078</td>
-	   <td>front-078</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def076</td>
+	   <td>front-076</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Amazon Linux 2023.6.20241010</td>  
 	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
@@ -1341,13 +1307,30 @@
      </td>
        </tr>
 <tr>
-       <td>eu-north-1</td>
+       <td>us-east-2</td>
        <td>012345678911</td>
-       <td>i-0d2941b87e51def079</td>
-	   <td>front-079</td>
+       <td>i-0d2941b87e51def077</td>
+	   <td>worker-077</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t4g.nano</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def078</td>
+	   <td>redis-078</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1360,11 +1343,11 @@
 <tr>
        <td>us-east-2</td>
        <td>012345678911</td>
-       <td>i-0d2941b87e51def080</td>
-	   <td>nginx-080</td>
+       <td>i-0d2941b87e51def079</td>
+	   <td>db-079</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1375,63 +1358,29 @@
      </td>
        </tr>
 <tr>
-       <td>eu-north-1</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def080</td>
+	   <td>front-080</td>
+	   <td>x86_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t2.micro</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def081</td>
 	   <td>db-081</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def082</td>
-	   <td>proxy-082</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def083</td>
-	   <td>front-083</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def084</td>
-	   <td>db-084</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Amazon Linux 2023.6.20241010</td>  
 	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
@@ -1444,11 +1393,62 @@
        </tr>
 <tr>
        <td>eu-north-1</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def082</td>
+	   <td>nginx-082</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678910</td>
+       <td>i-0d2941b87e51def083</td>
+	   <td>db-083</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def084</td>
+	   <td>front-084</td>
+	   <td>arm_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>m6g.xlarge</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def085</td>
 	   <td>front-085</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>t2.micro</td>
 	   <td>running</td>
      <td>
@@ -1460,13 +1460,13 @@
      </td>
        </tr>
 <tr>
-       <td>eu-west-1</td>
-       <td>012345678910</td>
+       <td>eu-north-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def086</td>
-	   <td>worker-086</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>front-086</td>
+	   <td>x86_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1480,28 +1480,11 @@
        <td>us-east-2</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def087</td>
-	   <td>worker-087</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-north-1</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def088</td>
-	   <td>front-088</td>
+	   <td>redis-087</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
-	   <td>running</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
          hx-get=/cloud-commis/vmdetails
@@ -1512,12 +1495,12 @@
        </tr>
 <tr>
        <td>us-east-2</td>
-       <td>012345678910</td>
-       <td>i-0d2941b87e51def089</td>
-	   <td>front-089</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def088</td>
+	   <td>service-088</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1530,11 +1513,28 @@
 <tr>
        <td>eu-west-1</td>
        <td>012345678910</td>
+       <td>i-0d2941b87e51def089</td>
+	   <td>front-089</td>
+	   <td>x86_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>c5a.large</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-north-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def090</td>
-	   <td>webapp-090</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
+	   <td>service-090</td>
+	   <td>x86_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1545,30 +1545,13 @@
      </td>
        </tr>
 <tr>
-       <td>us-east-2</td>
-       <td>012345678910</td>
+       <td>eu-west-1</td>
+       <td>012345678911</td>
        <td>i-0d2941b87e51def091</td>
 	   <td>front-091</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>us-east-2</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def092</td>
-	   <td>db-092</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>x86_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1581,11 +1564,28 @@
 <tr>
        <td>eu-north-1</td>
        <td>012345678911</td>
+       <td>i-0d2941b87e51def092</td>
+	   <td>redis-092</td>
+	   <td>x86_64</td>
+	   <td>Red Hat Enterprise Linux 9.4</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def093</td>
 	   <td>worker-093</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t2.micro</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t4g.nano</td>
 	   <td>stopped</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1599,26 +1599,9 @@
        <td>eu-west-1</td>
        <td>012345678910</td>
        <td>i-0d2941b87e51def094</td>
-	   <td>redis-094</td>
+	   <td>nginx-094</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
-       <td>i-0d2941b87e51def095</td>
-	   <td>worker-095</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Amazon Linux 2023.6.20241010</td>  
 	   <td>t2.micro</td>
 	   <td>running</td>
      <td>
@@ -1632,10 +1615,27 @@
 <tr>
        <td>eu-north-1</td>
        <td>012345678911</td>
+       <td>i-0d2941b87e51def095</td>
+	   <td>db-095</td>
+	   <td>x86_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t2.micro</td>
+	   <td>running</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def096</td>
 	   <td>front-096</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Red Hat Enterprise Linux 9.4</td>  
 	   <td>m6g.xlarge</td>
 	   <td>stopped</td>
      <td>
@@ -1647,13 +1647,13 @@
      </td>
        </tr>
 <tr>
-       <td>eu-north-1</td>
-       <td>012345678911</td>
+       <td>eu-west-1</td>
+       <td>012345678910</td>
        <td>i-0d2941b87e51def097</td>
-	   <td>nginx-097</td>
-	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>c5a.large</td>
+	   <td>service-097</td>
+	   <td>arm_64</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>m6g.xlarge</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
@@ -1667,9 +1667,26 @@
        <td>eu-north-1</td>
        <td>012345678911</td>
        <td>i-0d2941b87e51def098</td>
-	   <td>db-098</td>
+	   <td>front-098</td>
+	   <td>arm_64</td>
+	   <td>Amazon Linux 2023.6.20241010</td>  
+	   <td>t4g.nano</td>
+	   <td>stopped</td>
+     <td>
+       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
+         hx-get=/cloud-commis/vmdetails
+         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
+         Details
+       </button>
+     </td>
+       </tr>
+<tr>
+       <td>us-east-2</td>
+       <td>012345678911</td>
+       <td>i-0d2941b87e51def099</td>
+	   <td>db-099</td>
 	   <td>x86_64</td>
-	   <td>Linux/UNIX</td>  
+	   <td>Ubuntu 22.04.5 LTS</td>  
 	   <td>c5a.large</td>
 	   <td>running</td>
      <td>
@@ -1683,28 +1700,11 @@
 <tr>
        <td>us-east-2</td>
        <td>012345678910</td>
-       <td>i-0d2941b87e51def099</td>
-	   <td>front-099</td>
-	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>t4g.nano</td>
-	   <td>running</td>
-     <td>
-       <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight
-         hx-get=/cloud-commis/vmdetails
-         hx-trigger=click hx-target=#rightPanelDetails hx-swap=innerHTML>
-         Details
-       </button>
-     </td>
-       </tr>
-<tr>
-       <td>eu-west-1</td>
-       <td>012345678911</td>
        <td>i-0d2941b87e51def100</td>
-	   <td>redis-100</td>
+	   <td>db-100</td>
 	   <td>arm_64</td>
-	   <td>Linux/UNIX</td>  
-	   <td>m6g.xlarge</td>
+	   <td>Ubuntu 22.04.5 LTS</td>  
+	   <td>t4g.nano</td>
 	   <td>running</td>
      <td>
        <button class=btn btn-primary type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasRight aria-controls=offcanvasRight

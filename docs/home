@@ -1,5 +1,4 @@
 
-
   <div class="container-fluid">
   
     <!-- vm by region pie chart -->
@@ -8,7 +7,7 @@
         Total VMs: <p class="text-center fw-bold fs-2">100</p>
       </div>
       <div class="col-md border p-3">
-        <canvas id="regionChart"></canvas>
+        <canvas id="regionChart" width="600" height="350"></canvas>
         <script>
     
         var xValues = [
@@ -16,18 +15,17 @@
           "eu-west-3",
         
           "us-east-2",
-
           "eu-north-1",
         
         ];
     
         var yValues = [
         
-          25,
+        25,
         
-          15,
+        15,
 
-          60,
+        60,
         
         ];
     
@@ -49,6 +47,12 @@
             }]
           },
           options: {
+            plugins:{
+              legend: { 
+                position: "right",
+              }
+            },
+            responsive: false,
             title: {
               display: true,
               text: "servers per region"
@@ -57,10 +61,12 @@
         });
         </script>
       </div>
+    </div>
     
     <!-- vm by type bar chart -->
+    <div class="row">
       <div class="col-md border p-3" >
-        <canvas id="instanceTypeChart" style="height: 400px; width: 400;"></canvas>
+        <canvas id="instanceTypeChart" width="600" height="350"></canvas>
     
         <script>
         var xvmTypes = [
@@ -76,13 +82,13 @@
         ];
         var yvmTypes = [
         
-          20,
+        20,
         
-          20,
+        20,
 
-          50,
+        50,
 
-          10,
+        10,
         
         ];
         var barColors = ["red", "green","blue","orange","brown"];
@@ -98,6 +104,7 @@
             }]
           },
           options: {
+            responsive: false,
             legend: {display: false},
             title: {
               display: true,
@@ -112,24 +119,85 @@
         });
         </script>
       </div>
-    
-    <!-- vm by Account bar chart -->
+
+    <!-- vm by OS pie chart -->
       <div class="col-md border p-3">
-        <canvas id="AccountChart" style="height: 400px; width: 400;"></canvas>
+        <canvas id="SumVmByOSChart" width="600" height="350"></canvas>
+        <script>
+    
+        var xOSValues = [
+        
+          "Amazon Linux 2023.6.20241010",
+        
+          "Red Hat Enterprise Linux 9.4",
+        
+          "Ubuntu 22.04.5 LTS",
+        
+        ];
+    
+        var yOSValues = [
+        
+          33,
+        
+          27,
+        
+          40,
+        
+        ];
+    
+        var barColors = [
+          "#b91d47",
+          "#00aba9",
+          "#2b5797",
+          "#e8c3b9",
+          "#1e7145"
+        ];
+    
+        new Chart("SumVmByOSChart", {
+          type: "pie",
+          data: {
+            labels: xOSValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yOSValues
+            }]
+          },
+          options: {
+            plugins:{
+              legend: { 
+                position: "right",
+              }
+            },
+            responsive: false,
+            title: {
+              align: "start",
+              display: true,
+              text: "servers by Operating System"
+            }
+          }
+        });
+        </script>
+      </div>
+    </div>
+
+    <!-- vm by Account bar chart -->
+    <div class="row">
+      <div class="col-md border p-3">
+        <canvas id="AccountChart" width="600" height="350"></canvas>
     
         <script>
         var xaccounts = [
         
-          "012345678910",
+        "012345678910",
 
-          "012345678911",
+        "012345678911",
         
         ];
         var yacccount = [
         
-          80,
+        80,
 
-          20,
+        20,
         
         ];
         var barColors = ["red", "green","blue","orange","brown"];
@@ -145,6 +213,7 @@
             }]
           },
           options: {
+            responsive: false,
             legend: {display: false},
             title: {
               display: true,
@@ -160,6 +229,5 @@
         </script>
       </div>
     </div>
+
   </div>
-
-
